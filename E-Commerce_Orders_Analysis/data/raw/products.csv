@@ -1,0 +1,601 @@
+product_id,product_name,category,brand,unit_price,unit_cost,avg_rating,active
+PROD10001,Kensho Bluetooth Speaker,Electronics,Kensho,22.93,10.66,4.4,True
+PROD10002,Trueform Power Bank,Electronics,Trueform,32.71,17.0,3.2,True
+PROD10003,Nimbus Router,Electronics,Nimbus,39.71,22.08,4.9,True
+PROD10004,Bluepeak Noise-Cancelling Headphones,Electronics,Bluepeak,44.28,30.04,4.2,True
+PROD10005,Northline Mechanical Keyboard,Electronics,Northline,38.41,20.76,4.3,True
+PROD10006,Trueform Noise-Cancelling Headphones,Electronics,Trueform,57.98,33.59,4.3,True
+PROD10007,Bluepeak Bluetooth Speaker,Electronics,Bluepeak,38.56,23.44,3.3,True
+PROD10008,Northline Noise-Cancelling Headphones,Electronics,Northline,16.67,11.03,4.5,True
+PROD10009,Trueform Smart Watch,Electronics,Trueform,26.67,17.89,4.1,True
+PROD10010,Cedar Grove Router,Electronics,Cedar Grove,17.96,9.44,3.4,True
+PROD10011,Nimbus Mechanical Keyboard,Electronics,Nimbus,46.54,21.43,4.2,False
+PROD10012,Halcyon 4K Monitor,Electronics,Halcyon,27.73,15.75,4.2,True
+PROD10013,Halcyon Router,Electronics,Halcyon,44.58,26.73,4.4,True
+PROD10014,Bluepeak Wireless Earbuds,Electronics,Bluepeak,38.79,25.93,3.4,True
+PROD10015,Cedar Grove Bluetooth Speaker,Electronics,Cedar Grove,37.52,20.87,4.4,True
+PROD10016,Northline Smart Watch,Electronics,Northline,23.15,13.63,4.8,True
+PROD10017,Halcyon Router,Electronics,Halcyon,17.24,7.92,4.0,True
+PROD10018,Halcyon Noise-Cancelling Headphones,Electronics,Halcyon,15.0,9.46,3.6,False
+PROD10019,Cedar Grove Power Bank,Electronics,Cedar Grove,32.53,15.52,4.2,True
+PROD10020,Aurex 4K Monitor,Electronics,Aurex,30.94,15.68,4.4,True
+PROD10021,Nimbus Bluetooth Speaker,Electronics,Nimbus,19.98,12.95,4.2,True
+PROD10022,Cedar Grove Bluetooth Speaker,Electronics,Cedar Grove,44.23,25.3,4.1,True
+PROD10023,Verdant Bluetooth Speaker,Electronics,Verdant,15.0,7.27,4.2,False
+PROD10024,Aurex Mechanical Keyboard,Electronics,Aurex,28.11,13.43,4.2,True
+PROD10025,Bluepeak Bluetooth Speaker,Electronics,Bluepeak,37.52,21.81,3.7,False
+PROD10026,Northline Bluetooth Speaker,Electronics,Northline,29.48,18.16,3.7,True
+PROD10027,Marlow & Co Router,Electronics,Marlow & Co,53.54,35.7,3.3,True
+PROD10028,Bluepeak Mechanical Keyboard,Electronics,Bluepeak,19.39,10.19,4.0,True
+PROD10029,Halcyon Power Bank,Electronics,Halcyon,45.53,24.96,3.8,True
+PROD10030,Bluepeak USB-C Hub,Electronics,Bluepeak,24.72,11.27,3.6,True
+PROD10031,Northline USB-C Hub,Electronics,Northline,16.55,11.14,4.3,True
+PROD10032,Trueform Router,Electronics,Trueform,25.19,16.96,4.7,True
+PROD10033,Kensho USB-C Hub,Electronics,Kensho,15.28,9.46,4.4,True
+PROD10034,Verdant Webcam,Electronics,Verdant,42.97,28.09,4.0,True
+PROD10035,Northline USB-C Hub,Electronics,Northline,17.41,10.22,3.7,True
+PROD10036,Cedar Grove Wireless Earbuds,Electronics,Cedar Grove,26.13,12.84,3.6,True
+PROD10037,Trueform Wireless Earbuds,Electronics,Trueform,15.0,9.12,4.5,True
+PROD10038,Aurex Webcam,Electronics,Aurex,18.49,10.75,4.6,True
+PROD10039,Northline Noise-Cancelling Headphones,Electronics,Northline,34.95,23.57,4.4,True
+PROD10040,Trueform Bluetooth Speaker,Electronics,Trueform,32.8,18.05,4.2,True
+PROD10041,Verdant Noise-Cancelling Headphones,Electronics,Verdant,39.86,19.5,4.2,True
+PROD10042,Halcyon USB-C Hub,Electronics,Halcyon,36.58,19.87,3.8,True
+PROD10043,Bluepeak USB-C Hub,Electronics,Bluepeak,15.08,6.8,5.0,True
+PROD10044,Kensho 4K Monitor,Electronics,Kensho,27.82,15.11,4.4,False
+PROD10045,Cedar Grove 4K Monitor,Electronics,Cedar Grove,26.53,14.5,,False
+PROD10046,Northline Wireless Earbuds,Electronics,Northline,39.0,19.47,3.9,True
+PROD10047,Bluepeak Power Bank,Electronics,Bluepeak,19.82,9.41,4.1,True
+PROD10048,Kensho USB-C Hub,Electronics,Kensho,29.99,15.75,3.9,True
+PROD10049,Bluepeak Power Bank,Electronics,Bluepeak,15.0,7.34,3.8,True
+PROD10050,Bluepeak Webcam,Electronics,Bluepeak,15.0,6.95,4.5,False
+PROD10051,Verdant Smart Watch,Electronics,Verdant,26.06,15.84,4.4,False
+PROD10052,Cedar Grove Smart Watch,Electronics,Cedar Grove,15.76,8.59,4.1,True
+PROD10053,Cedar Grove Bluetooth Speaker,Electronics,Cedar Grove,15.0,8.6,5.0,True
+PROD10054,Trueform Router,Electronics,Trueform,25.9,12.79,3.9,True
+PROD10055,Cedar Grove Noise-Cancelling Headphones,Electronics,Cedar Grove,26.32,17.82,4.9,True
+PROD10056,Nimbus Power Bank,Electronics,Nimbus,23.01,13.92,4.1,False
+PROD10057,Trueform Smart Watch,Electronics,Trueform,25.7,15.84,4.4,True
+PROD10058,Nimbus Noise-Cancelling Headphones,Electronics,Nimbus,30.85,15.71,4.4,False
+PROD10059,Cedar Grove Bluetooth Speaker,Electronics,Cedar Grove,19.99,13.07,4.3,True
+PROD10060,Northline 4K Monitor,Electronics,Northline,147.37,,4.0,False
+PROD10061,Verdant Noise-Cancelling Headphones,Electronics,Verdant,43.72,22.93,4.4,True
+PROD10062,Kensho Noise-Cancelling Headphones,Electronics,Kensho,15.02,9.93,4.3,False
+PROD10063,Trueform Power Bank,Electronics,Trueform,18.28,12.16,4.0,False
+PROD10064,Kensho Mechanical Keyboard,Electronics,Kensho,28.17,13.09,4.8,True
+PROD10065,Halcyon Webcam,Electronics,Halcyon,21.07,13.92,4.3,True
+PROD10066,Kensho Webcam,Electronics,Kensho,33.79,16.56,4.2,True
+PROD10067,Halcyon Mechanical Keyboard,Electronics,Halcyon,41.89,20.0,3.6,True
+PROD10068,Kensho Wireless Earbuds,Electronics,Kensho,18.61,10.52,4.2,False
+PROD10069,Verdant Smart Watch,Electronics,Verdant,23.71,11.48,3.9,True
+PROD10070,Halcyon Mechanical Keyboard,Electronics,Halcyon,29.9,15.38,3.5,True
+PROD10071,Northline Wireless Earbuds,Electronics,Northline,15.0,8.31,4.2,True
+PROD10072,Aurex Bluetooth Speaker,Electronics,Aurex,19.85,10.06,3.9,True
+PROD10073,Halcyon Bluetooth Speaker,Electronics,Halcyon,20.95,13.52,4.1,True
+PROD10074,Trueform Noise-Cancelling Headphones,Electronics,Trueform,60.65,35.08,3.4,True
+PROD10075,Halcyon Power Bank,Electronics,Halcyon,22.91,15.02,3.8,True
+PROD10076,Nimbus Leather Belt,Apparel,Nimbus,31.55,17.54,4.0,True
+PROD10077,Halcyon Denim Jacket,Apparel,Halcyon,57.16,36.33,4.8,True
+PROD10078,Marlow & Co Leather Belt,Apparel,Marlow & Co,52.73,35.29,4.5,True
+PROD10079,Bluepeak Leather Belt,Apparel,Bluepeak,44.66,29.59,3.9,True
+PROD10080,Aurex Yoga Pants,Apparel,Aurex,30.21,14.4,3.7,True
+PROD10081,Cedar Grove Denim Jacket,Apparel,Cedar Grove,60.0,34.42,3.6,True
+PROD10082,Halcyon Wool Sweater,Apparel,Halcyon,27.27,12.96,4.8,True
+PROD10083,Trueform Wool Sweater,Apparel,Trueform,43.88,27.36,4.9,True
+PROD10084,Bluepeak Hooded Sweatshirt,Apparel,Bluepeak,21.81,10.02,3.9,True
+PROD10085,Marlow & Co Denim Jacket,Apparel,Marlow & Co,48.19,26.65,4.1,True
+PROD10086,Nimbus Yoga Pants,Apparel,Nimbus,13.84,8.7,3.8,False
+PROD10087,Verdant Hooded Sweatshirt,Apparel,Verdant,22.0,12.62,4.1,True
+PROD10088,Trueform Running Shoes,Apparel,Trueform,22.43,10.29,4.4,True
+PROD10089,Marlow & Co Denim Jacket,Apparel,Marlow & Co,15.9,7.21,4.7,False
+PROD10090,Cedar Grove Leather Belt,Apparel,Cedar Grove,8.0,4.51,4.2,True
+PROD10091,Nimbus Wool Sweater,Apparel,Nimbus,15.99,10.22,3.9,True
+PROD10092,Northline Leather Belt,Apparel,Northline,15.28,7.23,3.4,True
+PROD10093,Verdant Rain Jacket,Apparel,Verdant,9.99,5.21,3.7,True
+PROD10094,Marlow & Co Cotton T-Shirt,Apparel,Marlow & Co,40.95,27.49,4.4,True
+PROD10095,Marlow & Co Cotton T-Shirt,Apparel,Marlow & Co,11.14,6.48,4.2,True
+PROD10096,Bluepeak Denim Jacket,Apparel,Bluepeak,20.51,9.72,3.7,True
+PROD10097,Trueform Running Shoes,Apparel,Trueform,27.4,13.02,4.3,True
+PROD10098,Verdant Slim Fit Jeans,Apparel,Verdant,26.44,17.43,4.6,True
+PROD10099,Cedar Grove Leather Belt,Apparel,Cedar Grove,24.93,14.29,,False
+PROD10100,Verdant Denim Jacket,Apparel,Verdant,54.02,30.99,4.2,True
+PROD10101,Verdant Yoga Pants,Apparel,Verdant,23.2,15.29,5.0,False
+PROD10102,Aurex Hooded Sweatshirt,Apparel,Aurex,30.05,13.8,4.8,True
+PROD10103,Kensho Baseball Cap,Apparel,Kensho,28.9,18.72,4.2,True
+PROD10104,Northline Slim Fit Jeans,Apparel,Northline,16.22,10.83,3.4,True
+PROD10105,Marlow & Co Wool Sweater,Apparel,Marlow & Co,22.11,10.74,4.6,True
+PROD10106,Nimbus Hooded Sweatshirt,Apparel,Nimbus,16.96,8.07,4.2,False
+PROD10107,Verdant Cotton T-Shirt,Apparel,Verdant,17.4,8.88,4.4,True
+PROD10108,Nimbus Hooded Sweatshirt,Apparel,Nimbus,29.23,18.56,4.3,True
+PROD10109,Cedar Grove Hooded Sweatshirt,Apparel,Cedar Grove,60.0,38.57,4.2,False
+PROD10110,Bluepeak Wool Sweater,Apparel,Bluepeak,8.0,4.3,,True
+PROD10111,Bluepeak Wool Sweater,Apparel,Bluepeak,16.7,7.71,3.8,True
+PROD10112,Verdant Denim Jacket,Apparel,Verdant,8.57,4.44,4.6,True
+PROD10113,Kensho Rain Jacket,Apparel,Kensho,16.96,11.45,,True
+PROD10114,Verdant Slim Fit Jeans,Apparel,Verdant,60.0,33.75,3.9,True
+PROD10115,Bluepeak Hooded Sweatshirt,Apparel,Bluepeak,22.86,15.44,5.0,True
+PROD10116,Aurex Cotton T-Shirt,Apparel,Aurex,39.63,18.77,3.7,True
+PROD10117,Cedar Grove Rain Jacket,Apparel,Cedar Grove,23.27,13.5,4.2,True
+PROD10118,Cedar Grove Wool Sweater,Apparel,Cedar Grove,30.08,15.69,3.9,False
+PROD10119,Marlow & Co Cotton T-Shirt,Apparel,Marlow & Co,16.26,10.55,,False
+PROD10120,Halcyon Running Shoes,Apparel,Halcyon,52.38,30.09,4.5,True
+PROD10121,Verdant Hooded Sweatshirt,Apparel,Verdant,30.48,17.83,4.0,True
+PROD10122,Trueform Hooded Sweatshirt,Apparel,Trueform,19.67,9.34,3.5,False
+PROD10123,Bluepeak Slim Fit Jeans,Apparel,Bluepeak,32.63,16.57,3.9,True
+PROD10124,Aurex Running Shoes,Apparel,Aurex,44.32,28.19,4.2,True
+PROD10125,Nimbus Hooded Sweatshirt,Apparel,Nimbus,60.0,38.98,4.6,True
+PROD10126,Verdant Yoga Pants,Apparel,Verdant,60.0,,4.4,True
+PROD10127,Trueform Rain Jacket,Apparel,Trueform,27.52,16.43,3.7,True
+PROD10128,Halcyon Denim Jacket,Apparel,Halcyon,17.16,8.23,4.0,True
+PROD10129,Kensho Slim Fit Jeans,Apparel,Kensho,20.1,10.63,4.6,True
+PROD10130,Cedar Grove Cotton T-Shirt,Apparel,Cedar Grove,17.77,10.06,4.1,True
+PROD10131,Aurex Running Shoes,Apparel,Aurex,22.36,13.62,3.7,False
+PROD10132,Aurex Yoga Pants,Apparel,Aurex,30.94,17.5,4.6,True
+PROD10133,Nimbus Rain Jacket,Apparel,Nimbus,34.76,18.03,4.3,False
+PROD10134,Halcyon Cotton T-Shirt,Apparel,Halcyon,32.59,16.79,4.2,True
+PROD10135,Halcyon Yoga Pants,Apparel,Halcyon,44.71,26.17,3.4,True
+PROD10136,Aurex Cotton T-Shirt,Apparel,Aurex,27.88,17.84,4.7,True
+PROD10137,Nimbus Baseball Cap,Apparel,Nimbus,47.54,31.68,4.6,True
+PROD10138,Verdant Yoga Pants,Apparel,Verdant,15.4,10.35,3.7,True
+PROD10139,Marlow & Co Cotton T-Shirt,Apparel,Marlow & Co,8.09,5.41,4.4,True
+PROD10140,Halcyon Running Shoes,Apparel,Halcyon,11.12,7.47,4.5,True
+PROD10141,Marlow & Co Hooded Sweatshirt,Apparel,Marlow & Co,60.0,35.67,3.9,True
+PROD10142,Trueform Wool Sweater,Apparel,Trueform,23.65,15.15,4.5,False
+PROD10143,Verdant Leather Belt,Apparel,Verdant,60.0,36.78,4.3,True
+PROD10144,Northline Baseball Cap,Apparel,Northline,20.87,10.39,3.6,True
+PROD10145,Nimbus Yoga Pants,Apparel,Nimbus,33.08,15.81,4.3,True
+PROD10146,Marlow & Co Wool Sweater,Apparel,Marlow & Co,38.39,22.74,4.7,True
+PROD10147,Nimbus Slim Fit Jeans,Apparel,Nimbus,37.01,21.47,4.2,False
+PROD10148,Marlow & Co Hooded Sweatshirt,Apparel,Marlow & Co,18.17,12.34,3.8,True
+PROD10149,Verdant Denim Jacket,Apparel,Verdant,28.5,14.19,4.0,False
+PROD10150,Bluepeak Wool Sweater,Apparel,Bluepeak,53.04,26.78,4.8,True
+PROD10151,Verdant Air Fryer,Home & Kitchen,Verdant,17.95,10.13,4.4,True
+PROD10152,Bluepeak Blender,Home & Kitchen,Bluepeak,14.7,7.24,4.0,True
+PROD10153,Cedar Grove Table Lamp,Home & Kitchen,Cedar Grove,12.96,7.3,4.4,True
+PROD10154,Verdant Blender,Home & Kitchen,Verdant,22.04,11.12,4.7,True
+PROD10155,Northline Air Fryer,Home & Kitchen,Northline,70.77,37.75,4.0,True
+PROD10156,Kensho Non-Stick Pan,Home & Kitchen,Kensho,19.52,9.57,4.2,True
+PROD10157,Kensho Coffee Maker,Home & Kitchen,Kensho,15.26,10.36,4.7,False
+PROD10158,Trueform Air Fryer,Home & Kitchen,Trueform,17.95,9.4,4.5,True
+PROD10159,Nimbus Blender,Home & Kitchen,Nimbus,67.71,40.39,3.9,True
+PROD10160,Northline Throw Pillow,Home & Kitchen,Northline,21.25,,3.6,True
+PROD10161,Nimbus Cutting Board,Home & Kitchen,Nimbus,31.68,21.51,4.6,False
+PROD10162,Bluepeak Table Lamp,Home & Kitchen,Bluepeak,64.39,35.06,,True
+PROD10163,Northline Throw Pillow,Home & Kitchen,Northline,25.45,14.12,4.2,False
+PROD10164,Nimbus Throw Pillow,Home & Kitchen,Nimbus,48.73,29.53,4.2,True
+PROD10165,Trueform Cutting Board,Home & Kitchen,Trueform,6.6,3.58,4.4,True
+PROD10166,Northline Non-Stick Pan,Home & Kitchen,Northline,90.0,46.19,4.2,True
+PROD10167,Cedar Grove Non-Stick Pan,Home & Kitchen,Cedar Grove,33.02,20.61,4.6,True
+PROD10168,Bluepeak Blender,Home & Kitchen,Bluepeak,42.46,23.58,3.9,True
+PROD10169,Marlow & Co Throw Pillow,Home & Kitchen,Marlow & Co,13.33,6.28,4.1,True
+PROD10170,Halcyon Throw Pillow,Home & Kitchen,Halcyon,21.49,10.72,3.8,False
+PROD10171,Northline Table Lamp,Home & Kitchen,Northline,30.75,18.4,4.5,True
+PROD10172,Marlow & Co Blender,Home & Kitchen,Marlow & Co,31.78,20.37,,True
+PROD10173,Marlow & Co Table Lamp,Home & Kitchen,Marlow & Co,89.57,41.89,3.6,True
+PROD10174,Nimbus Cutting Board,Home & Kitchen,Nimbus,34.72,21.7,4.6,True
+PROD10175,Kensho Cutlery Set,Home & Kitchen,Kensho,14.67,7.32,4.9,True
+PROD10176,Halcyon Blender,Home & Kitchen,Halcyon,34.51,23.46,4.5,False
+PROD10177,Cedar Grove Storage Bins,Home & Kitchen,Cedar Grove,15.24,10.05,4.3,True
+PROD10178,Northline Cutting Board,Home & Kitchen,Northline,30.55,14.59,4.3,True
+PROD10179,Kensho Cutting Board,Home & Kitchen,Kensho,28.57,13.37,3.9,True
+PROD10180,Trueform Throw Pillow,Home & Kitchen,Trueform,22.07,10.67,3.3,True
+PROD10181,Bluepeak Cutlery Set,Home & Kitchen,Bluepeak,15.24,7.78,4.5,True
+PROD10182,Bluepeak Cutlery Set,Home & Kitchen,Bluepeak,16.85,10.59,4.8,False
+PROD10183,Northline Coffee Maker,Home & Kitchen,Northline,21.67,13.05,3.5,True
+PROD10184,Cedar Grove Table Lamp,Home & Kitchen,Cedar Grove,31.93,20.72,4.2,False
+PROD10185,Northline Throw Pillow,Home & Kitchen,Northline,17.49,9.67,4.3,True
+PROD10186,Bluepeak Bath Towel Set,Home & Kitchen,Bluepeak,16.83,10.46,4.1,False
+PROD10187,Nimbus Throw Pillow,Home & Kitchen,Nimbus,33.5,15.74,4.3,False
+PROD10188,Cedar Grove Non-Stick Pan,Home & Kitchen,Cedar Grove,35.24,23.33,4.5,True
+PROD10189,Verdant Throw Pillow,home & kitchen,Verdant,11.78,7.82,4.6,True
+PROD10190,Aurex Cutting Board,Home & Kitchen,Aurex,38.56,21.82,4.1,True
+PROD10191,Kensho Table Lamp,Home & Kitchen,Kensho,53.11,35.88,4.5,False
+PROD10192,Nimbus Blender,Home & Kitchen,Nimbus,17.91,,3.9,True
+PROD10193,Halcyon Coffee Maker,Home & Kitchen,Halcyon,20.27,11.89,4.5,True
+PROD10194,Kensho Blender,Home & Kitchen,Kensho,10.28,5.69,4.2,True
+PROD10195,Bluepeak Air Fryer,Home & Kitchen,Bluepeak,90.0,56.38,4.3,True
+PROD10196,Verdant Bath Towel Set,Home & Kitchen,Verdant,25.9,14.99,3.9,True
+PROD10197,Northline Air Fryer,Home & Kitchen,Northline,13.1,7.76,4.6,True
+PROD10198,Trueform Air Fryer,Home & Kitchen,Trueform,26.62,14.03,4.4,True
+PROD10199,Nimbus Throw Pillow,Home & Kitchen,Nimbus,27.37,12.34,4.6,False
+PROD10200,Nimbus Bath Towel Set,Home & Kitchen,Nimbus,13.42,7.81,4.1,False
+PROD10201,Cedar Grove Coffee Maker,Home & Kitchen,Cedar Grove,58.28,31.68,4.5,True
+PROD10202,Cedar Grove Non-Stick Pan,Home & Kitchen,Cedar Grove,19.37,11.0,3.8,True
+PROD10203,Cedar Grove Storage Bins,Home & Kitchen,Cedar Grove,19.35,11.9,4.3,False
+PROD10204,Cedar Grove Bath Towel Set,Home & Kitchen,Cedar Grove,15.99,9.72,3.9,True
+PROD10205,Nimbus Bath Towel Set,Home & Kitchen,Nimbus,27.13,16.99,4.0,True
+PROD10206,Bluepeak Cutting Board,Home & Kitchen,Bluepeak,26.53,13.15,4.1,True
+PROD10207,Cedar Grove Cutting Board,Home & Kitchen,Cedar Grove,31.65,18.45,,True
+PROD10208,Aurex Non-Stick Pan,Home & Kitchen,Aurex,31.98,18.81,3.7,True
+PROD10209,Verdant Non-Stick Pan,home & kitchen,Verdant,90.0,44.15,4.0,True
+PROD10210,Trueform Table Lamp,Home & Kitchen,Trueform,45.58,21.35,4.4,True
+PROD10211,Bluepeak Throw Pillow,Home & Kitchen,Bluepeak,9.1,5.83,4.3,True
+PROD10212,Nimbus Air Fryer,Home & Kitchen,Nimbus,45.38,27.59,4.7,True
+PROD10213,Verdant Cutlery Set,Home & Kitchen,Verdant,35.38,21.9,4.4,True
+PROD10214,Marlow & Co Coffee Maker,Home & Kitchen,Marlow & Co,73.93,33.54,4.4,True
+PROD10215,Nimbus Coffee Maker,Home & Kitchen,Nimbus,50.06,26.12,4.2,False
+PROD10216,Verdant Throw Pillow,home & kitchen,Verdant,28.21,13.51,3.4,True
+PROD10217,Trueform Cutlery Set,Home & Kitchen,Trueform,44.41,20.28,4.3,True
+PROD10218,Aurex Storage Bins,Home & Kitchen,Aurex,35.61,17.81,4.5,True
+PROD10219,Nimbus Blender,Home & Kitchen,Nimbus,26.79,12.39,4.4,True
+PROD10220,Kensho Cutting Board,Home & Kitchen,Kensho,28.39,15.5,4.4,True
+PROD10221,Aurex Cutlery Set,Home & Kitchen,Aurex,6.0,4.02,3.8,True
+PROD10222,Northline Non-Stick Pan,Home & Kitchen,Northline,32.7,14.96,4.0,True
+PROD10223,Aurex Bath Towel Set,Home & Kitchen,Aurex,44.34,25.1,4.4,True
+PROD10224,Cedar Grove Cutlery Set,Home & Kitchen,Cedar Grove,58.58,31.96,4.2,True
+PROD10225,Bluepeak Non-Stick Pan,Home & Kitchen,Bluepeak,14.04,8.78,,True
+PROD10226,Northline Electric Toothbrush,Beauty & Personal Care,Northline,24.09,12.84,4.3,True
+PROD10227,Aurex Facial Cleanser,Beauty & Personal Care,Aurex,40.0,23.73,4.2,False
+PROD10228,Kensho Facial Cleanser,Beauty & Personal Care,Kensho,9.33,5.49,,True
+PROD10229,Northline Electric Toothbrush,Beauty & Personal Care,Northline,8.81,4.51,4.2,True
+PROD10230,Nimbus Facial Cleanser,Beauty & Personal Care,Nimbus,25.54,16.99,4.7,False
+PROD10231,Aurex Sunscreen SPF50,Beauty & Personal Care,Aurex,13.55,8.8,4.8,True
+PROD10232,Verdant Sunscreen SPF50,Beauty & Personal Care,Verdant,12.91,7.73,4.2,True
+PROD10233,Bluepeak Electric Toothbrush,Beauty & Personal Care,Bluepeak,20.89,11.03,4.0,True
+PROD10234,Nimbus Body Lotion,Beauty & Personal Care,Nimbus,13.55,7.39,4.7,True
+PROD10235,Marlow & Co Lip Balm Set,Beauty & Personal Care,Marlow & Co,25.71,13.04,,False
+PROD10236,Marlow & Co Lip Balm Set,Beauty & Personal Care,Marlow & Co,40.0,22.64,3.7,True
+PROD10237,Aurex Electric Toothbrush,Beauty & Personal Care,Aurex,37.09,23.42,5.0,True
+PROD10238,Verdant Hair Dryer,Beauty & Personal Care,Verdant,27.91,18.72,4.0,True
+PROD10239,Verdant Lip Balm Set,Beauty & Personal Care,Verdant,24.13,15.88,4.1,True
+PROD10240,Northline Lip Balm Set,Beauty & Personal Care,Northline,40.0,26.48,3.9,True
+PROD10241,Halcyon Nail Care Kit,Beauty & Personal Care,Halcyon,40.0,23.91,4.3,True
+PROD10242,Trueform Lip Balm Set,Beauty & Personal Care,Trueform,28.99,14.18,4.3,True
+PROD10243,Aurex Perfume,Beauty & Personal Care,Aurex,25.94,14.36,4.2,True
+PROD10244,Nimbus Sunscreen SPF50,Beauty & Personal Care,Nimbus,40.0,25.54,4.3,True
+PROD10245,Halcyon Sunscreen SPF50,Beauty & Personal Care,Halcyon,35.53,22.59,4.2,False
+PROD10246,Marlow & Co Shampoo,Beauty & Personal Care,Marlow & Co,16.81,10.57,3.8,True
+PROD10247,Northline Lip Balm Set,Beauty & Personal Care,Northline,19.45,13.13,3.8,True
+PROD10248,Northline Body Lotion,Beauty & Personal Care,Northline,10.9,5.42,4.6,True
+PROD10249,Verdant Hair Dryer,Beauty & Personal Care,Verdant,28.87,17.87,3.3,True
+PROD10250,Halcyon Body Lotion,Beauty & Personal Care,Halcyon,15.66,9.75,4.1,True
+PROD10251,Kensho Sunscreen SPF50,Beauty & Personal Care,Kensho,5.41,2.52,4.5,True
+PROD10252,Cedar Grove Lip Balm Set,Beauty & Personal Care,Cedar Grove,13.54,6.68,4.1,True
+PROD10253,Trueform Hair Dryer,Beauty & Personal Care,Trueform,19.9,11.29,4.2,True
+PROD10254,Halcyon Nail Care Kit,Beauty & Personal Care,Halcyon,13.15,6.96,4.2,True
+PROD10255,Aurex Electric Toothbrush,Beauty & Personal Care,Aurex,11.69,7.22,4.2,False
+PROD10256,Nimbus Nail Care Kit,Beauty & Personal Care,Nimbus,20.53,10.54,4.4,True
+PROD10257,Bluepeak Perfume,Beauty & Personal Care,Bluepeak,36.09,21.05,3.9,False
+PROD10258,Marlow & Co Electric Toothbrush,Beauty & Personal Care,Marlow & Co,17.29,7.93,4.1,False
+PROD10259,Kensho Sunscreen SPF50,Beauty & Personal Care,Kensho,24.15,15.81,3.8,False
+PROD10260,Marlow & Co Lip Balm Set,Beauty & Personal Care,Marlow & Co,18.31,8.7,4.0,True
+PROD10261,Cedar Grove Body Lotion,Beauty & Personal Care,Cedar Grove,19.08,12.73,4.5,True
+PROD10262,Bluepeak Shampoo,Beauty & Personal Care,Bluepeak,40.0,27.04,,True
+PROD10263,Bluepeak Electric Toothbrush,Beauty & Personal Care,Bluepeak,40.0,26.95,4.1,True
+PROD10264,Verdant Vitamin C Serum,Beauty & Personal Care,Verdant,28.78,17.09,4.0,True
+PROD10265,Halcyon Nail Care Kit,Beauty & Personal Care,Halcyon,40.0,18.18,4.6,True
+PROD10266,Halcyon Lip Balm Set,Beauty & Personal Care,Halcyon,40.0,18.38,4.3,True
+PROD10267,Verdant Sunscreen SPF50,Beauty & Personal Care,Verdant,14.25,,,True
+PROD10268,Aurex Hair Dryer,Beauty & Personal Care,Aurex,40.0,20.16,4.1,True
+PROD10269,Kensho Electric Toothbrush,Beauty & Personal Care,Kensho,13.77,8.47,4.6,True
+PROD10270,Verdant Electric Toothbrush,Beauty & Personal Care,Verdant,22.86,12.59,4.4,True
+PROD10271,Bluepeak Electric Toothbrush,Beauty & Personal Care,Bluepeak,40.0,25.81,4.0,True
+PROD10272,Verdant Hair Dryer,Beauty & Personal Care,Verdant,40.0,25.29,4.2,True
+PROD10273,Kensho Electric Toothbrush,Beauty & Personal Care,Kensho,19.05,10.32,4.3,True
+PROD10274,Bluepeak Shampoo,Beauty & Personal Care,Bluepeak,22.2,11.44,4.3,True
+PROD10275,Verdant Lip Balm Set,Beauty & Personal Care,Verdant,13.63,6.47,3.7,True
+PROD10276,Nimbus Facial Cleanser,Beauty & Personal Care,Nimbus,34.39,17.92,4.4,True
+PROD10277,Verdant Electric Toothbrush,Beauty & Personal Care,Verdant,40.0,21.49,4.1,True
+PROD10278,Trueform Electric Toothbrush,Beauty & Personal Care,Trueform,20.35,10.47,4.7,True
+PROD10279,Verdant Perfume,Beauty & Personal Care,Verdant,40.0,25.59,4.8,True
+PROD10280,Nimbus Facial Cleanser,Beauty & Personal Care,Nimbus,20.9,12.08,4.3,True
+PROD10281,Kensho Lip Balm Set,Beauty & Personal Care,Kensho,12.64,6.27,4.7,True
+PROD10282,Bluepeak Shampoo,Beauty & Personal Care,Bluepeak,40.0,19.29,4.5,True
+PROD10283,Halcyon Shampoo,Beauty & Personal Care,Halcyon,39.68,24.18,4.5,True
+PROD10284,Bluepeak Vitamin C Serum,Beauty & Personal Care,Bluepeak,24.01,15.65,3.3,True
+PROD10285,Northline Shampoo,Beauty & Personal Care,Northline,24.45,15.94,4.0,True
+PROD10286,Aurex Facial Cleanser,Beauty & Personal Care,Aurex,9.18,5.65,4.2,True
+PROD10287,Verdant Vitamin C Serum,Beauty & Personal Care,Verdant,32.11,16.85,,True
+PROD10288,Marlow & Co Body Lotion,Beauty & Personal Care,Marlow & Co,19.61,9.21,3.6,False
+PROD10289,Kensho Hair Dryer,Beauty & Personal Care,Kensho,18.29,11.06,,True
+PROD10290,Verdant Vitamin C Serum,Beauty & Personal Care,Verdant,30.48,14.01,5.0,True
+PROD10291,Verdant Electric Toothbrush,Beauty & Personal Care,Verdant,38.97,20.76,3.6,True
+PROD10292,Aurex Lip Balm Set,Beauty & Personal Care,Aurex,36.26,20.96,5.0,False
+PROD10293,Marlow & Co Sunscreen SPF50,Beauty & Personal Care,Marlow & Co,32.81,20.23,4.5,True
+PROD10294,Kensho Perfume,Beauty & Personal Care,Kensho,19.53,12.36,4.8,True
+PROD10295,Bluepeak Hair Dryer,Beauty & Personal Care,Bluepeak,40.0,24.05,4.0,True
+PROD10296,Verdant Lip Balm Set,Beauty & Personal Care,Verdant,40.0,25.33,3.9,True
+PROD10297,Halcyon Shampoo,Beauty & Personal Care,Halcyon,10.44,5.41,4.2,True
+PROD10298,Verdant Vitamin C Serum,Beauty & Personal Care,Verdant,10.82,6.17,4.4,True
+PROD10299,Marlow & Co Shampoo,Beauty & Personal Care,Marlow & Co,40.0,26.53,2.9,True
+PROD10300,Halcyon Perfume,Beauty & Personal Care,Halcyon,40.0,18.59,4.1,True
+PROD10301,Trueform Water Bottle,Sports & Outdoors,Trueform,40.51,26.24,4.5,True
+PROD10302,Trueform Water Bottle,Sports & Outdoors,Trueform,30.85,17.97,3.9,True
+PROD10303,Bluepeak Water Bottle,Sports & Outdoors,Bluepeak,44.0,28.54,4.2,False
+PROD10304,Marlow & Co Hiking Backpack,Sports & Outdoors,Marlow & Co,18.56,10.79,4.0,True
+PROD10305,Northline Dumbbell Set,Sports & Outdoors,Northline,21.63,10.35,4.6,True
+PROD10306,Verdant Foam Roller,Sports & Outdoors,Verdant,24.99,16.19,5.0,False
+PROD10307,Nimbus Bike Helmet,Sports & Outdoors,Nimbus,16.11,8.57,4.4,True
+PROD10308,Marlow & Co Camping Tent,sports & outdoors,Marlow & Co,31.1,19.6,4.1,False
+PROD10309,Trueform Bike Helmet,Sports & Outdoors,Trueform,73.61,47.92,4.4,True
+PROD10310,Verdant Water Bottle,Sports & Outdoors,Verdant,23.13,14.77,3.9,True
+PROD10311,Nimbus Dumbbell Set,Sports & Outdoors,Nimbus,51.86,24.14,3.8,False
+PROD10312,Northline Resistance Bands,Sports & Outdoors,Northline,89.07,47.27,4.1,True
+PROD10313,Halcyon Resistance Bands,Sports & Outdoors,Halcyon,57.82,37.27,3.8,False
+PROD10314,Northline Sleeping Bag,Sports & Outdoors,Northline,11.19,5.96,3.8,True
+PROD10315,Marlow & Co Water Bottle,Sports & Outdoors,Marlow & Co,14.5,6.78,3.6,True
+PROD10316,Bluepeak Resistance Bands,Sports & Outdoors,Bluepeak,53.06,26.73,3.9,True
+PROD10317,Trueform Hiking Backpack,Sports & Outdoors,Trueform,70.02,37.81,4.6,True
+PROD10318,Kensho Yoga Mat,Sports & Outdoors,Kensho,25.01,14.5,3.9,True
+PROD10319,Aurex Resistance Bands,Sports & Outdoors,Aurex,26.94,13.25,4.7,True
+PROD10320,Nimbus Hiking Backpack,Sports & Outdoors,Nimbus,23.43,11.03,4.2,True
+PROD10321,Verdant Jump Rope,Sports & Outdoors,Verdant,6.0,2.83,3.5,True
+PROD10322,Northline Camping Tent,Sports & Outdoors,Northline,24.07,16.18,,True
+PROD10323,Verdant Camping Tent,Sports & Outdoors,Verdant,9.98,5.45,4.6,False
+PROD10324,Kensho Yoga Mat,Sports & Outdoors,Kensho,39.49,25.92,4.2,True
+PROD10325,Bluepeak Jump Rope,Sports & Outdoors,Bluepeak,83.6,45.81,5.0,True
+PROD10326,Aurex Camping Tent,Sports & Outdoors,Aurex,66.5,32.38,4.2,True
+PROD10327,Aurex Yoga Mat,Sports & Outdoors,Aurex,13.6,8.64,4.5,True
+PROD10328,Marlow & Co Water Bottle,Sports & Outdoors,Marlow & Co,100.0,57.89,4.7,True
+PROD10329,Trueform Jump Rope,Sports & Outdoors,Trueform,32.62,20.4,4.2,True
+PROD10330,Nimbus Bike Helmet,Sports & Outdoors,Nimbus,13.4,8.27,4.3,False
+PROD10331,Aurex Sleeping Bag,Sports & Outdoors,Aurex,21.89,10.89,3.7,True
+PROD10332,Aurex Hiking Backpack,Sports & Outdoors,Aurex,6.66,3.57,4.1,False
+PROD10333,Halcyon Bike Helmet,Sports & Outdoors,Halcyon,53.35,26.48,3.7,True
+PROD10334,Nimbus Sleeping Bag,Sports & Outdoors,Nimbus,26.07,16.47,4.1,False
+PROD10335,Cedar Grove Camping Tent,Sports & Outdoors,Cedar Grove,63.33,37.71,3.9,True
+PROD10336,Kensho Hiking Backpack,Sports & Outdoors,Kensho,100.0,58.84,3.9,True
+PROD10337,Northline Resistance Bands,Sports & Outdoors,Northline,7.3,3.56,4.3,True
+PROD10338,Northline Bike Helmet,Sports & Outdoors,Northline,20.87,9.43,3.9,True
+PROD10339,Nimbus Dumbbell Set,Sports & Outdoors,Nimbus,40.53,23.51,4.1,True
+PROD10340,Halcyon Yoga Mat,Sports & Outdoors,Halcyon,21.73,12.0,3.6,True
+PROD10341,Bluepeak Resistance Bands,Sports & Outdoors,Bluepeak,34.27,22.91,4.3,False
+PROD10342,Northline Yoga Mat,Sports & Outdoors,Northline,28.42,19.32,4.6,True
+PROD10343,Verdant Resistance Bands,Sports & Outdoors,Verdant,21.65,10.41,4.6,True
+PROD10344,Halcyon Resistance Bands,Sports & Outdoors,Halcyon,17.07,7.97,3.8,True
+PROD10345,Verdant Camping Tent,Sports & Outdoors,Verdant,31.22,17.88,4.1,False
+PROD10346,Kensho Yoga Mat,Sports & Outdoors,Kensho,32.9,20.9,4.9,True
+PROD10347,Nimbus Dumbbell Set,Sports & Outdoors,Nimbus,90.23,55.9,3.9,True
+PROD10348,Trueform Bike Helmet,Sports & Outdoors,Trueform,15.4,7.69,5.0,True
+PROD10349,Kensho Yoga Mat,Sports & Outdoors,Kensho,26.26,13.98,4.5,True
+PROD10350,Bluepeak Jump Rope,Sports & Outdoors,Bluepeak,22.44,12.59,4.6,False
+PROD10351,Bluepeak Hiking Backpack,Sports & Outdoors,Bluepeak,27.38,13.61,3.9,True
+PROD10352,Halcyon Hiking Backpack,Sports & Outdoors,Halcyon,20.75,10.01,4.0,True
+PROD10353,Aurex Yoga Mat,Sports & Outdoors,Aurex,18.26,12.15,4.2,False
+PROD10354,Nimbus Yoga Mat,Sports & Outdoors,Nimbus,13.44,6.9,4.1,False
+PROD10355,Aurex Resistance Bands,Sports & Outdoors,Aurex,35.78,22.66,3.4,True
+PROD10356,Kensho Resistance Bands,Sports & Outdoors,Kensho,51.35,28.99,3.8,True
+PROD10357,Trueform Foam Roller,Sports & Outdoors,Trueform,31.39,17.87,4.6,True
+PROD10358,Trueform Foam Roller,Sports & Outdoors,Trueform,78.7,43.58,4.0,False
+PROD10359,Marlow & Co Dumbbell Set,Sports & Outdoors,Marlow & Co,36.19,,4.3,True
+PROD10360,Northline Bike Helmet,Sports & Outdoors,Northline,23.15,14.95,3.8,True
+PROD10361,Marlow & Co Dumbbell Set,Sports & Outdoors,Marlow & Co,37.72,23.18,3.6,True
+PROD10362,Cedar Grove Foam Roller,Sports & Outdoors,Cedar Grove,17.61,11.83,5.0,False
+PROD10363,Kensho Foam Roller,Sports & Outdoors,Kensho,35.29,20.79,4.3,True
+PROD10364,Marlow & Co Foam Roller,Sports & Outdoors,Marlow & Co,20.88,13.89,4.5,False
+PROD10365,Trueform Resistance Bands,Sports & Outdoors,Trueform,9.57,5.73,4.2,True
+PROD10366,Trueform Sleeping Bag,Sports & Outdoors,Trueform,18.89,10.27,3.5,False
+PROD10367,Halcyon Water Bottle,Sports & Outdoors,Halcyon,17.05,8.48,3.9,False
+PROD10368,Marlow & Co Foam Roller,Sports & Outdoors,Marlow & Co,12.6,7.13,4.5,True
+PROD10369,Kensho Foam Roller,Sports & Outdoors,Kensho,24.76,11.42,4.1,True
+PROD10370,Aurex Jump Rope,Sports & Outdoors,Aurex,31.8,18.17,4.0,False
+PROD10371,Aurex Yoga Mat,Sports & Outdoors,Aurex,9.88,4.87,5.0,True
+PROD10372,Cedar Grove Hiking Backpack,Sports & Outdoors,Cedar Grove,27.65,16.2,3.8,True
+PROD10373,Nimbus Foam Roller,Sports & Outdoors,Nimbus,19.76,10.91,4.3,True
+PROD10374,Cedar Grove Water Bottle,Sports & Outdoors,Cedar Grove,79.98,45.28,3.9,False
+PROD10375,Kensho Bike Helmet,Sports & Outdoors,Kensho,10.1,5.33,4.7,True
+PROD10376,Trueform Travel Guide,Books,Trueform,21.29,11.6,4.5,True
+PROD10377,Verdant Children's Picture Book,Books,Verdant,29.02,18.69,3.9,True
+PROD10378,Cedar Grove Cookbook,Books,Cedar Grove,19.18,10.0,3.9,True
+PROD10379,Bluepeak Mystery Novel,Books,Bluepeak,30.0,14.13,4.1,True
+PROD10380,Marlow & Co Biography,Books,Marlow & Co,18.9,10.25,3.8,False
+PROD10381,Halcyon Poetry Collection,Books,Halcyon,30.0,16.12,4.2,True
+PROD10382,Nimbus Self-Help Guide,Books,Nimbus,30.0,14.11,4.0,True
+PROD10383,Nimbus Biography,Books,Nimbus,20.78,12.64,4.0,True
+PROD10384,Nimbus Business Strategy Book,Books,Nimbus,24.6,11.35,4.0,True
+PROD10385,Verdant Children's Picture Book,Books,Verdant,15.15,,3.9,True
+PROD10386,Cedar Grove Travel Guide,Books,Cedar Grove,10.97,6.94,3.9,True
+PROD10387,Halcyon Poetry Collection,Books,Halcyon,17.1,9.69,4.6,True
+PROD10388,Kensho History Bestseller,Books,Kensho,30.0,17.49,4.7,True
+PROD10389,Verdant Children's Picture Book,Books,Verdant,9.65,6.16,3.8,True
+PROD10390,Northline Business Strategy Book,Books,Northline,30.0,16.49,3.8,True
+PROD10391,Nimbus Travel Guide,Books,Nimbus,25.3,13.7,4.9,True
+PROD10392,Northline Mystery Novel,Books,Northline,24.18,14.54,4.0,True
+PROD10393,Cedar Grove Poetry Collection,Books,Cedar Grove,29.49,19.15,3.5,False
+PROD10394,Nimbus Biography,Books,Nimbus,9.62,5.1,4.2,True
+PROD10395,Kensho Sci-Fi Anthology,Books,Kensho,12.98,6.2,4.0,True
+PROD10396,Marlow & Co Self-Help Guide,Books,Marlow & Co,12.56,7.28,3.9,True
+PROD10397,Verdant Self-Help Guide,Books,Verdant,17.57,11.8,3.7,True
+PROD10398,Kensho Biography,Books,Kensho,16.2,10.22,4.5,True
+PROD10399,Aurex Sci-Fi Anthology,Books,Aurex,22.92,11.37,5.0,True
+PROD10400,Halcyon Mystery Novel,Books,Halcyon,22.17,14.69,4.6,True
+PROD10401,Nimbus Mystery Novel,Books,Nimbus,17.69,8.14,3.9,True
+PROD10402,Nimbus Mystery Novel,Books,Nimbus,30.0,15.25,4.8,True
+PROD10403,Bluepeak Cookbook,Books,Bluepeak,30.0,15.27,4.5,False
+PROD10404,Northline History Bestseller,Books,Northline,11.38,6.55,4.2,True
+PROD10405,Verdant Sci-Fi Anthology,Books,Verdant,25.01,15.23,,True
+PROD10406,Trueform Self-Help Guide,Books,Trueform,30.0,14.82,3.2,True
+PROD10407,Trueform Self-Help Guide,Books,Trueform,23.3,11.83,3.8,False
+PROD10408,Kensho History Bestseller,Books,Kensho,10.3,6.89,4.2,True
+PROD10409,Bluepeak History Bestseller,Books,Bluepeak,30.0,13.63,4.1,True
+PROD10410,Cedar Grove Poetry Collection,Books,Cedar Grove,29.45,14.83,3.8,False
+PROD10411,Cedar Grove Children's Picture Book,Books,Cedar Grove,24.89,11.88,5.0,True
+PROD10412,Halcyon History Bestseller,Books,Halcyon,14.05,8.68,4.4,True
+PROD10413,Marlow & Co Cookbook,Books,Marlow & Co,11.84,6.6,3.8,False
+PROD10414,Kensho History Bestseller,Books,Kensho,30.0,15.0,4.6,True
+PROD10415,Northline History Bestseller,Books,Northline,29.16,18.75,4.5,True
+PROD10416,Bluepeak Mystery Novel,Books,Bluepeak,26.39,13.49,4.5,True
+PROD10417,Kensho Business Strategy Book,Books,Kensho,30.0,19.45,4.1,True
+PROD10418,Nimbus Children's Picture Book,Books,Nimbus,8.78,4.58,4.3,False
+PROD10419,Nimbus Business Strategy Book,Books,Nimbus,20.6,11.49,4.3,True
+PROD10420,Nimbus Children's Picture Book,Books,Nimbus,5.99,3.26,4.2,True
+PROD10421,Nimbus Self-Help Guide,Books,Nimbus,30.0,17.26,3.9,True
+PROD10422,Nimbus Cookbook,Books,Nimbus,30.0,15.54,4.0,True
+PROD10423,Cedar Grove Travel Guide,Books,Cedar Grove,30.0,17.88,4.3,True
+PROD10424,Halcyon Poetry Collection,Books,Halcyon,19.77,10.74,3.8,False
+PROD10425,Aurex Cookbook,Books,Aurex,24.08,15.37,3.9,False
+PROD10426,Verdant Sci-Fi Anthology,Books,Verdant,30.0,14.56,4.3,True
+PROD10427,Nimbus History Bestseller,Books,Nimbus,14.87,9.15,4.4,True
+PROD10428,Cedar Grove Biography,Books,Cedar Grove,27.78,18.41,3.5,True
+PROD10429,Northline Cookbook,Books,Northline,9.93,6.58,4.6,True
+PROD10430,Verdant Travel Guide,Books,Verdant,30.0,16.56,4.8,True
+PROD10431,Verdant Sci-Fi Anthology,Books,Verdant,26.21,15.49,4.4,True
+PROD10432,Kensho Mystery Novel,Books,Kensho,24.74,16.61,4.6,True
+PROD10433,Verdant Business Strategy Book,Books,Verdant,30.0,16.48,3.6,False
+PROD10434,Nimbus Children's Picture Book,Books,Nimbus,11.17,5.82,4.0,True
+PROD10435,Trueform Travel Guide,Books,Trueform,28.24,17.7,3.8,False
+PROD10436,Northline Mystery Novel,Books,Northline,24.09,13.96,4.0,True
+PROD10437,Verdant Mystery Novel,Books,Verdant,30.0,13.62,4.3,True
+PROD10438,Nimbus Poetry Collection,Books,Nimbus,30.0,14.59,3.1,True
+PROD10439,Nimbus Mystery Novel,Books,Nimbus,23.56,15.31,4.3,True
+PROD10440,Nimbus Children's Picture Book,Books,Nimbus,18.24,9.96,4.6,True
+PROD10441,Bluepeak Poetry Collection,Books,Bluepeak,30.0,16.77,4.4,True
+PROD10442,Kensho Poetry Collection,Books,Kensho,26.9,17.88,4.7,True
+PROD10443,Trueform Travel Guide,Books,Trueform,27.03,15.55,4.0,True
+PROD10444,Verdant Children's Picture Book,Books,Verdant,30.0,19.52,4.1,True
+PROD10445,Bluepeak Biography,Books,Bluepeak,19.07,12.96,3.7,True
+PROD10446,Aurex Sci-Fi Anthology,Books,Aurex,23.34,14.63,4.7,True
+PROD10447,Verdant Cookbook,Books,Verdant,30.0,16.65,4.1,True
+PROD10448,Verdant Children's Picture Book,Books,Verdant,30.0,17.14,3.9,True
+PROD10449,Verdant Biography,Books,Verdant,16.24,10.0,4.3,True
+PROD10450,Northline Mystery Novel,Books,Northline,30.0,15.1,4.4,True
+PROD10451,Trueform Board Game,Toys & Games,Trueform,23.8,14.77,3.9,False
+PROD10452,Cedar Grove Puzzle 1000pc,Toys & Games,Cedar Grove,6.24,2.93,4.0,True
+PROD10453,Kensho Outdoor Playset,Toys & Games,Kensho,30.68,19.42,,True
+PROD10454,Trueform Building Blocks Set,Toys & Games,Trueform,17.35,9.24,3.9,True
+PROD10455,Kensho Puzzle 1000pc,Toys & Games,Kensho,22.72,15.07,4.1,False
+PROD10456,Northline Plush Toy,Toys & Games,Northline,22.31,13.27,4.2,False
+PROD10457,Verdant Educational Tablet Toy,Toys & Games,Verdant,20.03,9.29,4.6,True
+PROD10458,Bluepeak Puzzle 1000pc,Toys & Games,Bluepeak,49.59,29.81,3.8,True
+PROD10459,Kensho Action Figure,Toys & Games,Kensho,22.91,12.55,3.8,True
+PROD10460,Verdant Craft Kit,Toys & Games,Verdant,26.91,16.62,4.3,True
+PROD10461,Marlow & Co Outdoor Playset,Toys & Games,Marlow & Co,38.05,19.86,3.2,True
+PROD10462,Halcyon Remote Control Car,Toys & Games,Halcyon,30.54,19.91,3.8,True
+PROD10463,Halcyon Board Game,Toys & Games,Halcyon,9.45,6.01,4.5,True
+PROD10464,Marlow & Co Puzzle 1000pc,Toys & Games,Marlow & Co,50.0,24.3,3.9,True
+PROD10465,Kensho Board Game,Toys & Games,Kensho,10.65,5.54,4.4,True
+PROD10466,Aurex Puzzle 1000pc,Toys & Games,Aurex,30.16,15.81,4.2,True
+PROD10467,Northline Puzzle 1000pc,Toys & Games,Northline,34.39,16.94,4.1,True
+PROD10468,Halcyon Craft Kit,Toys & Games,Halcyon,10.63,6.22,4.2,True
+PROD10469,Halcyon Card Game,Toys & Games,Halcyon,29.72,17.69,3.5,True
+PROD10470,Marlow & Co Building Blocks Set,Toys & Games,Marlow & Co,48.16,22.31,4.0,True
+PROD10471,Northline Action Figure,Toys & Games,Northline,8.7,5.88,3.4,True
+PROD10472,Nimbus Card Game,Toys & Games,Nimbus,25.52,15.54,4.3,True
+PROD10473,Cedar Grove Remote Control Car,Toys & Games,Cedar Grove,39.09,22.58,4.2,False
+PROD10474,Bluepeak Craft Kit,Toys & Games,Bluepeak,38.4,20.53,3.5,True
+PROD10475,Trueform Educational Tablet Toy,Toys & Games,Trueform,11.16,6.12,4.4,True
+PROD10476,Northline Puzzle 1000pc,Toys & Games,Northline,29.49,16.11,4.2,True
+PROD10477,Northline Craft Kit,Toys & Games,Northline,15.16,7.15,4.7,True
+PROD10478,Aurex Puzzle 1000pc,Toys & Games,Aurex,20.85,9.71,4.8,True
+PROD10479,Bluepeak Action Figure,Toys & Games,Bluepeak,50.0,26.85,3.8,True
+PROD10480,Verdant Puzzle 1000pc,Toys & Games,Verdant,45.39,28.63,4.6,True
+PROD10481,Verdant Remote Control Car,Toys & Games,Verdant,50.0,23.5,4.4,True
+PROD10482,Aurex Remote Control Car,Toys & Games,Aurex,32.71,15.99,4.1,True
+PROD10483,Nimbus Puzzle 1000pc,Toys & Games,Nimbus,47.92,31.38,4.1,True
+PROD10484,Verdant Action Figure,Toys & Games,Verdant,4.77,2.42,3.6,False
+PROD10485,Kensho Plush Toy,Toys & Games,Kensho,14.46,8.4,4.2,False
+PROD10486,Halcyon Building Blocks Set,Toys & Games,Halcyon,39.9,25.74,3.8,True
+PROD10487,Cedar Grove Card Game,Toys & Games,Cedar Grove,17.86,11.88,3.9,False
+PROD10488,Kensho Action Figure,Toys & Games,Kensho,34.62,20.67,4.6,False
+PROD10489,Marlow & Co Educational Tablet Toy,Toys & Games,Marlow & Co,14.32,8.5,3.8,True
+PROD10490,Northline Action Figure,Toys & Games,Northline,22.93,13.37,4.1,False
+PROD10491,Marlow & Co Outdoor Playset,Toys & Games,Marlow & Co,10.44,5.14,3.9,True
+PROD10492,Halcyon Board Game,Toys & Games,Halcyon,34.94,19.38,4.2,True
+PROD10493,Trueform Card Game,Toys & Games,Trueform,28.6,18.34,4.5,False
+PROD10494,Verdant Card Game,Toys & Games,Verdant,50.0,26.62,4.2,True
+PROD10495,Northline Card Game,Toys & Games,Northline,28.65,17.72,4.1,True
+PROD10496,Trueform Plush Toy,Toys & Games,Trueform,16.29,9.28,4.2,True
+PROD10497,Verdant Card Game,Toys & Games,Verdant,23.87,11.19,4.0,True
+PROD10498,Cedar Grove Building Blocks Set,Toys & Games,Cedar Grove,16.25,8.88,4.4,True
+PROD10499,Nimbus Educational Tablet Toy,Toys & Games,Nimbus,26.55,15.36,4.1,True
+PROD10500,Trueform Educational Tablet Toy,Toys & Games,Trueform,46.02,26.46,4.4,True
+PROD10501,Marlow & Co Board Game,Toys & Games,Marlow & Co,50.0,26.17,4.6,False
+PROD10502,Verdant Building Blocks Set,Toys & Games,Verdant,15.3,8.74,3.9,False
+PROD10503,Marlow & Co Action Figure,Toys & Games,Marlow & Co,50.0,33.79,4.3,True
+PROD10504,Nimbus Plush Toy,Toys & Games,Nimbus,16.95,8.14,3.5,True
+PROD10505,Nimbus Building Blocks Set,Toys & Games,Nimbus,50.0,30.56,4.0,True
+PROD10506,Nimbus Action Figure,Toys & Games,Nimbus,50.0,24.75,4.2,True
+PROD10507,Nimbus Remote Control Car,Toys & Games,Nimbus,31.71,,3.8,True
+PROD10508,Halcyon Card Game,toys & games,Halcyon,50.0,29.22,4.2,False
+PROD10509,Aurex Action Figure,Toys & Games,Aurex,8.66,5.87,4.0,True
+PROD10510,Northline Board Game,Toys & Games,Northline,26.4,16.37,4.6,True
+PROD10511,Aurex Plush Toy,Toys & Games,Aurex,4.8,3.01,3.9,False
+PROD10512,Northline Puzzle 1000pc,Toys & Games,Northline,12.49,6.97,3.9,True
+PROD10513,Nimbus Plush Toy,Toys & Games,Nimbus,18.69,10.44,4.2,False
+PROD10514,Nimbus Educational Tablet Toy,Toys & Games,Nimbus,34.42,23.11,4.0,False
+PROD10515,Trueform Plush Toy,Toys & Games,Trueform,22.38,15.15,4.8,True
+PROD10516,Halcyon Craft Kit,Toys & Games,Halcyon,28.64,17.83,4.0,True
+PROD10517,Trueform Board Game,Toys & Games,Trueform,26.37,15.36,4.3,True
+PROD10518,Nimbus Puzzle 1000pc,Toys & Games,Nimbus,12.53,7.38,4.4,True
+PROD10519,Verdant Board Game,Toys & Games,Verdant,20.32,12.98,5.0,False
+PROD10520,Verdant Educational Tablet Toy,Toys & Games,Verdant,34.32,20.98,3.8,True
+PROD10521,Halcyon Board Game,Toys & Games,Halcyon,50.0,23.04,4.6,True
+PROD10522,Aurex Puzzle 1000pc,Toys & Games,Aurex,34.51,19.49,3.9,False
+PROD10523,Trueform Outdoor Playset,Toys & Games,Trueform,30.5,17.99,4.4,True
+PROD10524,Cedar Grove Craft Kit,Toys & Games,Cedar Grove,22.73,15.3,4.8,False
+PROD10525,Northline Plush Toy,Toys & Games,Northline,50.0,26.92,4.2,True
+PROD10526,Marlow & Co Olive Oil,Grocery,Marlow & Co,7.68,4.98,3.8,True
+PROD10527,Halcyon Organic Coffee Beans,Grocery,Halcyon,23.35,15.22,4.3,True
+PROD10528,Nimbus Spice Set,Grocery,Nimbus,9.18,5.78,4.0,True
+PROD10529,Cedar Grove Spice Set,Grocery,Cedar Grove,25.0,11.83,4.6,True
+PROD10530,Nimbus Honey Jar,Grocery,Nimbus,7.19,4.11,4.0,True
+PROD10531,Nimbus Sparkling Water Pack,Grocery,Nimbus,25.0,15.35,4.2,False
+PROD10532,Northline Protein Bar Case,Grocery,Northline,25.0,14.4,4.3,True
+PROD10533,Bluepeak Spice Set,Grocery,Bluepeak,25.0,15.24,4.3,True
+PROD10534,Aurex Green Tea Box,Grocery,Aurex,25.0,16.77,4.5,True
+PROD10535,Northline Spice Set,Grocery,Northline,22.5,11.92,3.8,True
+PROD10536,Aurex Trail Mix,Grocery,Aurex,25.0,14.23,4.0,False
+PROD10537,Verdant Protein Bar Case,Grocery,Verdant,14.83,7.24,3.7,True
+PROD10538,Kensho Granola,Grocery,Kensho,6.95,3.44,4.0,True
+PROD10539,Marlow & Co Olive Oil,Grocery,Marlow & Co,9.69,4.41,4.8,True
+PROD10540,Cedar Grove Sparkling Water Pack,Grocery,Cedar Grove,25.0,15.9,4.3,True
+PROD10541,Aurex Sparkling Water Pack,Grocery,Aurex,25.0,14.67,4.6,True
+PROD10542,Bluepeak Spice Set,Grocery,Bluepeak,25.0,16.53,3.8,True
+PROD10543,Nimbus Protein Bar Case,Grocery,Nimbus,20.08,11.43,4.6,True
+PROD10544,Bluepeak Granola,grocery,Bluepeak,22.28,11.85,4.0,True
+PROD10545,Aurex Granola,Grocery,Aurex,11.57,7.42,4.6,True
+PROD10546,Bluepeak Green Tea Box,Grocery,Bluepeak,25.0,15.22,4.0,True
+PROD10547,Verdant Sparkling Water Pack,Grocery,Verdant,19.17,10.96,3.9,True
+PROD10548,Aurex Honey Jar,Grocery,Aurex,25.0,15.22,4.1,True
+PROD10549,Bluepeak Sparkling Water Pack,Grocery,Bluepeak,25.0,12.33,5.0,True
+PROD10550,Bluepeak Honey Jar,Grocery,Bluepeak,25.0,15.35,4.2,False
+PROD10551,Northline Granola,Grocery,Northline,25.0,15.07,3.9,True
+PROD10552,Trueform Pasta Pack,Grocery,Trueform,15.13,7.77,4.9,True
+PROD10553,Aurex Trail Mix,Grocery,Aurex,25.0,16.43,4.5,True
+PROD10554,Trueform Granola,Grocery,Trueform,25.0,12.72,4.1,True
+PROD10555,Cedar Grove Granola,Grocery,Cedar Grove,25.0,16.31,3.7,True
+PROD10556,Trueform Sparkling Water Pack,Grocery,Trueform,14.26,8.77,4.2,True
+PROD10557,Trueform Olive Oil,Grocery,Trueform,25.0,14.34,3.7,True
+PROD10558,Aurex Trail Mix,Grocery,Aurex,25.0,14.2,3.8,True
+PROD10559,Aurex Sparkling Water Pack,Grocery,Aurex,21.73,10.65,4.4,True
+PROD10560,Nimbus Olive Oil,Grocery,Nimbus,20.25,11.94,4.6,False
+PROD10561,Marlow & Co Spice Set,Grocery,Marlow & Co,19.21,12.37,3.8,True
+PROD10562,Cedar Grove Organic Coffee Beans,Grocery,Cedar Grove,17.25,,4.0,True
+PROD10563,Verdant Pasta Pack,Grocery,Verdant,21.73,12.59,4.8,True
+PROD10564,Kensho Sparkling Water Pack,Grocery,Kensho,25.0,12.04,3.7,True
+PROD10565,Northline Protein Bar Case,Grocery,Northline,13.55,7.46,4.4,True
+PROD10566,Cedar Grove Granola,Grocery,Cedar Grove,25.0,13.76,4.1,True
+PROD10567,Verdant Trail Mix,Grocery,Verdant,20.15,9.32,4.6,True
+PROD10568,Northline Trail Mix,Grocery,Northline,10.62,6.4,3.8,True
+PROD10569,Verdant Protein Bar Case,Grocery,Verdant,24.72,15.77,4.5,True
+PROD10570,Verdant Granola,Grocery,Verdant,12.89,8.08,3.9,True
+PROD10571,Nimbus Trail Mix,Grocery,Nimbus,11.97,6.02,4.2,True
+PROD10572,Trueform Honey Jar,Grocery,Trueform,25.0,13.32,4.9,True
+PROD10573,Halcyon Spice Set,Grocery,Halcyon,13.8,8.06,4.3,True
+PROD10574,Verdant Sparkling Water Pack,Grocery,Verdant,25.0,15.74,4.6,True
+PROD10575,Aurex Granola,Grocery,Aurex,8.48,4.47,3.4,True
+PROD10576,Verdant Pasta Pack,Grocery,Verdant,15.7,9.6,4.6,False
+PROD10577,Verdant Protein Bar Case,Grocery,Verdant,20.13,12.92,4.1,True
+PROD10578,Cedar Grove Organic Coffee Beans,Grocery,Cedar Grove,25.0,14.88,4.5,True
+PROD10579,Halcyon Green Tea Box,Grocery,Halcyon,20.48,11.25,4.0,True
+PROD10580,Cedar Grove Spice Set,Grocery,Cedar Grove,19.26,8.81,4.1,True
+PROD10581,Bluepeak Granola,Grocery,Bluepeak,25.0,15.05,3.7,False
+PROD10582,Bluepeak Granola,Grocery,Bluepeak,22.04,11.65,4.2,True
+PROD10583,Northline Trail Mix,Grocery,Northline,25.0,15.87,4.5,False
+PROD10584,Trueform Protein Bar Case,Grocery,Trueform,18.83,8.96,4.5,True
+PROD10585,Kensho Olive Oil,Grocery,Kensho,25.0,15.97,4.2,True
+PROD10586,Verdant Protein Bar Case,Grocery,Verdant,25.0,14.01,3.8,True
+PROD10587,Cedar Grove Green Tea Box,Grocery,Cedar Grove,25.0,14.84,4.3,False
+PROD10588,Aurex Honey Jar,Grocery,Aurex,12.17,7.86,3.6,True
+PROD10589,Trueform Spice Set,Grocery,Trueform,17.09,11.15,4.3,True
+PROD10590,Bluepeak Olive Oil,Grocery,Bluepeak,7.57,4.94,5.0,True
+PROD10591,Aurex Protein Bar Case,Grocery,Aurex,25.0,12.21,4.5,True
+PROD10592,Northline Protein Bar Case,Grocery,Northline,25.0,11.67,4.0,True
+PROD10593,Halcyon Olive Oil,Grocery,Halcyon,7.72,5.1,4.0,True
+PROD10594,Halcyon Honey Jar,Grocery,Halcyon,25.0,11.55,4.2,True
+PROD10595,Cedar Grove Protein Bar Case,Grocery,Cedar Grove,13.73,6.75,4.0,True
+PROD10596,Verdant Protein Bar Case,Grocery,Verdant,25.0,12.45,3.6,False
+PROD10597,Halcyon Honey Jar,Grocery,Halcyon,25.0,16.01,4.4,True
+PROD10598,Aurex Trail Mix,Grocery,Aurex,25.0,11.39,3.4,True
+PROD10599,Marlow & Co Pasta Pack,Grocery,Marlow & Co,25.0,16.21,4.0,True
+PROD10600,Aurex Olive Oil,Grocery,Aurex,25.0,12.32,4.1,True
