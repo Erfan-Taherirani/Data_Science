@@ -79,6 +79,7 @@ check:
 ### Consistency
 
 - Data Logic Checks
+- Check the quality of the string columns
 
 ### Referential integrity
 
