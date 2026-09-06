@@ -21,22 +21,23 @@ for this project I will use the following 14 steps workflow:
 
 ## Phase 1: Data Understanding
 
-This phase is about understanding the data and the business questions that we want to answer.
+This phase is about understanding the data and the business questions that we want to answer. I should have documented:
 
-I should have documented:
-
-- What each table represents
-- Column meanings
+- Business objective
+- Business questions
+- Dataset/table overview
+- Column/data dictionary
 - Data types
 - Dataset size
 - Grain
-- Primary / business keys
+- Primary keys / business keys
 - Relationships
-- Categorical vs numerical fields
-- Date fields
-- Measures
-- Potential data-quality problems
+- Categorical vs. numerical fields
+- Date/time fields
+- Measures vs. dimensions
 - Business meaning of important fields
+- Potential data-quality risks
+- Initial assumptions and constraints
 
 ## Phase 2: Data Quality Audit (Profile + Diagnose)
 
