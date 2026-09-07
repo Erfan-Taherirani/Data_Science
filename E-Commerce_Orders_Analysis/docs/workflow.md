@@ -108,3 +108,27 @@ Business-rule violations
 Subtotal mismatches: 24
 ...
 ```
+
+## Phase 3: Deduplication
+
+- Type 1: drop exact duplicates
+- Type 2: drop business key duplicates
+
+## Phase 4: Data Cleaning
+
+### A. Structural Cleaning
+
+- Correct data types
+- Standardize column names
+- Parse dates
+- Remove unnecessary columns
+- Normalize categorical values
+
+### B. Missing Value Treatment
+
+### C. Business Rule Validation
+
+### D. Outlier Investigation
+
+Don't blindly drop the detected outliers and analyze them, I could be a valid big purchase or an error. After investigation decide what to do with the outliers.
+
