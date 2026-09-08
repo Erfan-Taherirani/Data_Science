@@ -132,3 +132,62 @@ Subtotal mismatches: 24
 
 Don't blindly drop the detected outliers and analyze them, I could be a valid big purchase or an error. After investigation decide what to do with the outliers.
 
+## Phase 5: Create the Analytical Dataset (in SQL)
+
+```
+Raw CSV
+   ↓
+Python quality investigation
+   ↓
+Cleaned data
+   ↓
+SQL staging
+   ↓
+SQL transformations
+   ↓
+Analytical model
+```
+
+In this phase we have 3 steps and we use SQL to do the transformations, joins, and aggregations and then build and analytical model.
+- step 1: **SQL Staging**
+- step 2: **SQL Transformations**
+- step 3: **Analytical Model**
+
+> **Fact Table:** Contains business events / measurements.
+
+> **Dimension Table:** Contains descriptive context.
+
+## Phase 6: Data Modeling
+
+We use star scheme for this project to model the data. We build the data model in Power BI.
+
+Power BI workflow is like:
+
+```
+Load the cleaned data
+   ↓
+Build the data model
+   ↓
+Build the measures
+   ↓
+Build the relationships
+   ↓
+Create needed dashboards
+```
+
+## Phase 7: Analytical SQL - Business Question Design
+
+Once your model exists, start asking business questions.
+
+**What decisions could an e-commerce management team make using this data?**
+
+### Workflow from business questions to insights:
+- Business Topic
+- Business Question
+- Define the KPI / metric
+- Determine required columns
+- Define aggregation level
+- Write SQL query
+- Validate result
+- Interpret the result
+- Business Insight
