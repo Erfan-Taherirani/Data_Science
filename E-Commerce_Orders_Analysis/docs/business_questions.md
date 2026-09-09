@@ -329,6 +329,91 @@ Think:
 
     This connects sales analytics with operations, which is valuable in e-commerce.
 
-6. 
+## Geography
 
-### Operations
+1. **Which countries generate the most revenue and profit?**
+
+    Compare:
+
+    - Revenue
+    - Orders
+    - Customers
+    - AOV
+    - Profit
+    - Profit margin
+
+2. **Which regions have the highest customer value?**
+
+    Analyze:
+
+        - customer_region
+
+    using:
+
+    - Revenue/customer
+    - Profit/customer
+    - AOV
+    - Orders/customer
+
+    This is better than simply ranking regions by revenue.
+
+3. **Which geographic markets have strong sales but weak profitability?**
+
+    This is one of my favorite questions for your dataset.
+
+    For example:
+
+    ```
+    Region A
+    Revenue: $5M
+    Profit margin: 4%
+
+    Region B
+    Revenue: $3M
+    Profit margin: 18%
+    ```
+
+    A simple revenue ranking would say:
+
+    Region A is better.
+
+    A profitability analysis says:
+
+    Region B may actually be economically more attractive.
+
+4. **Are shipping costs disproportionately high in certain markets?**
+
+    You have:
+
+    ```
+    shipping_cost
+    customer_country
+    customer_region
+    ```
+
+    So investigate:
+
+    - Which geographic markets have the highest shipping cost per order and shipping cost as a percentage of order value?
+
+    This can uncover operational inefficiencies.
+
+5. Which cities are the most important markets?
+
+    Rank cities by:
+
+    - Revenue
+    - Orders
+    - Customers
+    - Profit
+
+    But don't stop there.
+
+    Also consider:
+
+    - Revenue per customer
+
+    and:
+
+    - Profit per customer.
+
+    Otherwise large cities will naturally dominate simply because they have more customers.

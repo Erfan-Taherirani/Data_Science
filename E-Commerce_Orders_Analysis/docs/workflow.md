@@ -159,8 +159,62 @@ In this phase we have 3 steps and we use SQL to do the transformations, joins, a
 
 ## Phase 6: Data Modeling
 
-We use star scheme for this project to model the data. We build the data model in Power BI.
+We use star scheme for this project to model the data.
 
+## Phase 7: Analytical SQL - Business Question Design
+
+Once your model exists, start asking business questions.
+
+**What decisions could an e-commerce management team make using this data?**
+
+### Workflow from business questions to insights:
+1. Business Objective
+2. Business Question
+3. Required KPIs / Metrics
+4. Required Columns
+5. Define Analytical / Aggregation Grain
+6. Write SQL Query
+7. Validate Results
+8. Interpret Results
+9. Select Appropriate Visualization
+10. Derive Business Insights / Implications
+
+The suggested sql folder structure is:
+```
+sql/
+│
+├── 01_staging/
+│
+├── 02_transformation/
+│
+├── 03_data_model/
+│
+├── 04_analysis/
+│   │
+│   ├── sales/
+│   │   ├── sales_performance.sql
+│   │   ├── channel_analysis.sql
+│   │   └── discount_analysis.sql
+│   │
+│   ├── customers/
+│   │   ├── customer_value.sql
+│   │   ├── customer_concentration.sql
+│   │   └── acquisition_analysis.sql
+│   │
+│   ├── time/
+│   │   ├── sales_trends.sql
+│   │   ├── growth_analysis.sql
+│   │   └── delivery_trends.sql
+│   │
+│   └── geography/
+│       ├── country_analysis.sql
+│       ├── region_analysis.sql
+│       └── shipping_cost_analysis.sql
+│
+└── 05_validation/
+```
+
+### Power BI Workflow
 Power BI workflow is like:
 
 ```
@@ -174,20 +228,3 @@ Build the relationships
    ↓
 Create needed dashboards
 ```
-
-## Phase 7: Analytical SQL - Business Question Design
-
-Once your model exists, start asking business questions.
-
-**What decisions could an e-commerce management team make using this data?**
-
-### Workflow from business questions to insights:
-- Business Topic
-- Business Question
-- Define the KPI / metric
-- Determine required columns
-- Define aggregation level
-- Write SQL query
-- Validate result
-- Interpret the result
-- Business Insight
