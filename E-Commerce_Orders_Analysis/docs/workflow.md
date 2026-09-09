@@ -159,6 +159,8 @@ In this phase we have 3 steps and we use SQL to do the transformations, joins, a
 
 ## Phase 6: Data Modeling
 
+> note: drop null values, just ship_date, delivery_date, and campaign columns are allowed to be null.
+
 We use star scheme for this project to model the data.
 
 ## Phase 7: Analytical SQL - Business Question Design

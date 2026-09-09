@@ -59,11 +59,11 @@ CTE_discount_rate_level AS (
         discount_rate,
     CASE
         WHEN ROUND(discount_amount / revenue * 100, 2) = 0 THEN '0'
-        WHEN ROUND(discount_amount / revenue * 100, 2) > 0 THEN '1-5%'
-        WHEN ROUND(discount_amount / revenue * 100, 2) > 5 THEN '5-10%'
-        WHEN ROUND(discount_amount / revenue * 100, 2) > 10 THEN '10-15%'
-        WHEN ROUND(discount_amount / revenue * 100, 2) > 15 THEN '15-20%'
-        WHEN ROUND(discount_amount / revenue * 100, 2) > 20 THEN '20-30%'
+        WHEN ROUND(discount_amount / revenue * 100, 2) BETWEEN 0 AND 5 THEN '0-5%'
+        WHEN ROUND(discount_amount / revenue * 100, 2) BETWEEN 5 AND 10 THEN '5-10%'
+        WHEN ROUND(discount_amount / revenue * 100, 2) BETWEEN 10 AND 15 THEN '10-15%'
+        WHEN ROUND(discount_amount / revenue * 100, 2) BETWEEN 15 AND 20 THEN '15-20%'
+        WHEN ROUND(discount_amount / revenue * 100, 2) BETWEEN 20 AND 30 THEN '20-30%'
         ELSE '30%+'
     END AS discount_rate_level
     FROM CTE_table_with_primary_key
