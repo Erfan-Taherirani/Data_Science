@@ -141,8 +141,10 @@ total_order_value = subtotal + shipping_cost + tax_amount - discount_amount
 ## 8. Output
 
 **Cleaned dataset saved to:** `data/processed/orders_cleaned.csv`  
-**Schema:** 49,988 rows × 26 columns  
+**Schema:** 49,093 rows × 26 columns  
 **Memory:** ~5.9 MB (down from 10.3 MB via categorical encoding)
+
+We drop all the null values in the `delivery_status` and `payment_method` columns, and it the future works we'll impute them via ML.
 
 ---
 

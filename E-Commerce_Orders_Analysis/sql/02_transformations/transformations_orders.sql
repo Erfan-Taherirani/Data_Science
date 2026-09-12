@@ -1,7 +1,7 @@
 WITH CTE_table_with_primary_key AS (
     SELECT
-        DENSE_RANK() OVER (ORDER BY customer_id) AS customer_key,
         RANK() OVER (ORDER BY order_id) AS order_key,
+        customer_id,
         order_date,
         ship_date,
         delivery_date,
@@ -73,7 +73,7 @@ CTE_discount_rate_level AS (
 
 SELECT
     ctet.order_key,
-    ctet.customer_key,
+    ctet.customer_id,
     ctet.order_date,
     ctet.ship_date,
     ctet.delivery_date,

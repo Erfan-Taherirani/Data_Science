@@ -143,7 +143,8 @@ def validate_columns(df: pd.DataFrame) -> str:
 		'customer_region', 'order_status', 'total_items',
 		'unique_products', 'subtotal', 'discount_amount', 'shipping_cost',
 		'tax_amount', 'total_order_value', 'profit', 'shipping_method',
-		'payment_status', 'sales_channel', 'customer_acquisition_channel'
+		'payment_status', 'sales_channel', 'customer_acquisition_channel',
+		'delivery_status', 'payment_method'
 	]
 	for column in columns_with_no_missing_values:
 		assert df[column].isnull().sum() == 0, f"{column} contains missing values"
