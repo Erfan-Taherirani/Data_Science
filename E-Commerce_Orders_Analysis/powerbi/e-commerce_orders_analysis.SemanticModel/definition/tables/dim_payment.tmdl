@@ -1,0 +1,40 @@
+table dim_payment
+	lineageTag: 76f44782-7706-49d7-981f-4e8ae1f50fc4
+
+	column payment_key
+		dataType: int64
+		formatString: 0
+		lineageTag: b8c93a11-1b52-45bf-b7bd-dadd2212471e
+		summarizeBy: none
+		sourceColumn: payment_key
+
+		annotation SummarizationSetBy = User
+
+	column payment_method
+		dataType: string
+		lineageTag: bd112af4-9eea-4446-9152-689e39f67b3a
+		summarizeBy: none
+		sourceColumn: payment_method
+
+		annotation SummarizationSetBy = Automatic
+
+	column payment_status
+		dataType: string
+		lineageTag: eb33fc14-b9be-49ca-9ff5-e3bfdd9e614f
+		summarizeBy: none
+		sourceColumn: payment_status
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_payment = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("D:\Data Career\Repos\Data_Science\E-Commerce_Orders_Analysis\data\processed\dim_payment.csv"),[Delimiter=",", Columns=3, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"payment_key", Int64.Type}, {"payment_method", type text}, {"payment_status", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

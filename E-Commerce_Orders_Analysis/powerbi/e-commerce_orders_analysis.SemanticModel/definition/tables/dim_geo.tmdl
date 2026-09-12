@@ -1,0 +1,48 @@
+table dim_geo
+	lineageTag: d63707bd-6038-4c1f-a7a2-64f9d34a45a7
+
+	column geo_key
+		dataType: int64
+		formatString: 0
+		lineageTag: 256dc729-d414-4fdb-8094-34fff84ea073
+		summarizeBy: none
+		sourceColumn: geo_key
+
+		annotation SummarizationSetBy = User
+
+	column customer_country
+		dataType: string
+		lineageTag: 89041ac3-3d10-49ff-a71b-5ed903d0f069
+		summarizeBy: none
+		sourceColumn: customer_country
+
+		annotation SummarizationSetBy = Automatic
+
+	column customer_city
+		dataType: string
+		lineageTag: 1a0abbda-967d-4024-84cd-a761f7dbd8de
+		summarizeBy: none
+		sourceColumn: customer_city
+
+		annotation SummarizationSetBy = Automatic
+
+	column customer_region
+		dataType: string
+		lineageTag: c0e9c549-2def-4ce7-82bd-a47a7b9971ac
+		summarizeBy: none
+		sourceColumn: customer_region
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_geo = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("D:\Data Career\Repos\Data_Science\E-Commerce_Orders_Analysis\data\processed\dim_geo.csv"),[Delimiter=",", Columns=4, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"geo_key", Int64.Type}, {"customer_country", type text}, {"customer_city", type text}, {"customer_region", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

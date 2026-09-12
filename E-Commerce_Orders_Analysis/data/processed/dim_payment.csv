@@ -1,0 +1,21 @@
+payment_key,payment_method,payment_status
+1,bank transfer,failed
+2,bank transfer,paid
+3,bank transfer,pending
+4,bank transfer,refunded
+5,credit card,failed
+6,credit card,paid
+7,credit card,pending
+8,credit card,refunded
+9,debit card,failed
+10,debit card,paid
+11,debit card,pending
+12,debit card,refunded
+13,gift card,failed
+14,gift card,paid
+15,gift card,pending
+16,gift card,refunded
+17,paypal,failed
+18,paypal,paid
+19,paypal,pending
+20,paypal,refunded

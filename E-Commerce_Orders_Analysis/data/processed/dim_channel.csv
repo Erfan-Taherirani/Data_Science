@@ -1,0 +1,25 @@
+channel_key,sales_channel,customer_acquisition_channel
+1,marketplace,direct
+2,marketplace,email marketing
+3,marketplace,organic search
+4,marketplace,paid ads
+5,marketplace,referral
+6,marketplace,social media
+7,mobile app,direct
+8,mobile app,email marketing
+9,mobile app,organic search
+10,mobile app,paid ads
+11,mobile app,referral
+12,mobile app,social media
+13,social media,direct
+14,social media,email marketing
+15,social media,organic search
+16,social media,paid ads
+17,social media,referral
+18,social media,social media
+19,website,direct
+20,website,email marketing
+21,website,organic search
+22,website,paid ads
+23,website,referral
+24,website,social media

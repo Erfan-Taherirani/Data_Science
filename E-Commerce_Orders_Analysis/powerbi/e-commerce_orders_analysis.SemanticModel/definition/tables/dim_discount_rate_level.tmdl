@@ -1,0 +1,32 @@
+table dim_discount_rate_level
+	lineageTag: e8e191a8-8a95-4916-8a4c-146716fea4f9
+
+	column discount_rate_level_key
+		dataType: int64
+		formatString: 0
+		lineageTag: 919510e5-6c30-4253-992f-f1214a54fbf2
+		summarizeBy: none
+		sourceColumn: discount_rate_level_key
+
+		annotation SummarizationSetBy = User
+
+	column discount_rate_level
+		dataType: string
+		lineageTag: 2e47e5bb-5722-4027-9917-224b40daa005
+		summarizeBy: none
+		sourceColumn: discount_rate_level
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_discount_rate_level = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("D:\Data Career\Repos\Data_Science\E-Commerce_Orders_Analysis\data\processed\dim_discount_rate_level.csv"),[Delimiter=",", Columns=2, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"discount_rate_level_key", Int64.Type}, {"discount_rate_level", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

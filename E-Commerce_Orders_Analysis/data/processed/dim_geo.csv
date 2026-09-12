@@ -1,0 +1,22 @@
+geo_key,customer_country,customer_city,customer_region
+1,australia,brisbane,oceania
+2,australia,melbourne,oceania
+3,australia,sydney,oceania
+4,australia,unknown,oceania
+5,canada,montreal,north america
+6,canada,toronto,north america
+7,canada,unknown,north america
+8,canada,vancouver,north america
+9,germany,berlin,europe
+10,germany,hamburg,europe
+11,germany,munich,europe
+12,germany,unknown,europe
+13,united kingdom,birmingham,europe
+14,united kingdom,london,europe
+15,united kingdom,manchester,europe
+16,united kingdom,unknown,europe
+17,united states,chicago,north america
+18,united states,houston,north america
+19,united states,los angeles,north america
+20,united states,new york,north america
+21,united states,unknown,north america

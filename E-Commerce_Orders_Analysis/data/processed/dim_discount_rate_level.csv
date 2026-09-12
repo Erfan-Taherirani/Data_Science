@@ -1,0 +1,8 @@
+discount_rate_level_key,discount_rate_level
+1,0
+2,0-5%
+3,5-10%
+4,10-15%
+5,15-20%
+6,20-30%
+7,30%+

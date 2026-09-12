@@ -1,0 +1,40 @@
+table dim_flag
+	lineageTag: 74fc4af1-5ef8-4dc4-a12b-e18bee847315
+
+	column flag_key
+		dataType: int64
+		formatString: 0
+		lineageTag: 1fd68583-9945-4e1c-9c2e-70e32cb71b75
+		summarizeBy: none
+		sourceColumn: flag_key
+
+		annotation SummarizationSetBy = User
+
+	column shipping_method
+		dataType: string
+		lineageTag: 90846357-38b7-4477-b0a4-4ff404f762d9
+		summarizeBy: none
+		sourceColumn: shipping_method
+
+		annotation SummarizationSetBy = Automatic
+
+	column delivery_status
+		dataType: string
+		lineageTag: 10336675-f44a-4971-b952-15a54493059c
+		summarizeBy: none
+		sourceColumn: delivery_status
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_flag = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("D:\Data Career\Repos\Data_Science\E-Commerce_Orders_Analysis\data\processed\dim_flag.csv"),[Delimiter=",", Columns=3, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"flag_key", Int64.Type}, {"shipping_method", type text}, {"delivery_status", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

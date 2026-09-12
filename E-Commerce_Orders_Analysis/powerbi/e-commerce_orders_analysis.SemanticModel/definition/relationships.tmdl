@@ -1,0 +1,42 @@
+relationship 74c3bf41-cd3f-4e75-86a0-4bc2dd53bcdf
+	joinOnDateBehavior: datePartOnly
+	fromColumn: fact_orders.order_date
+	toColumn: LocalDateTable_1a63d2bd-e358-48e5-b41d-598d1ae6cb36.Date
+
+relationship 8d86046f-2927-47d9-ab1b-8d6f0dcdddb4
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dim_dates.order_date
+	toColumn: LocalDateTable_7f2d50f1-2fc0-4370-9bc9-74847695eb59.Date
+
+relationship 46434653-fb78-557d-3f3f-c449055b6f2f
+	fromColumn: fact_orders.campaign_key
+	toColumn: dim_campaign.campaign_key
+
+relationship b4fee55f-b50b-3d90-c256-4332dda99f10
+	fromColumn: fact_orders.channel_key
+	toColumn: dim_channel.channel_key
+
+relationship 9426384d-e696-6433-b8e3-82b064641f36
+	fromColumn: fact_orders.customer_key
+	toColumn: dim_customers.customer_key
+
+relationship dad2966b-a1fd-23fd-f331-b47b8dc2e360
+	fromColumn: fact_orders.date_key
+	toColumn: dim_dates.date_key
+
+relationship 0c7b6dd1-f04d-1c6f-5603-017200b1a318
+	fromColumn: fact_orders.flag_key
+	toColumn: dim_flag.flag_key
+
+relationship 599a265f-89c8-19c5-96a3-b8be660b384d
+	fromColumn: fact_orders.geo_key
+	toColumn: dim_geo.geo_key
+
+relationship 393db582-9816-6be4-af2f-e3fde493ec10
+	fromColumn: fact_orders.payment_key
+	toColumn: dim_payment.payment_key
+
+relationship 2f0bfcb2-0a2b-4ebb-fc08-09dfb1434491
+	fromColumn: fact_orders.discount_rate_level_key
+	toColumn: dim_discount_rate_level.discount_rate_level_key
+

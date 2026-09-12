@@ -1,0 +1,249 @@
+table fact_orders
+	lineageTag: 6de8f105-6ea0-43f5-a97c-53bac9ce73e1
+
+	column order_key
+		dataType: int64
+		formatString: 0
+		lineageTag: f8be58b2-e41a-4930-9e74-9b2ba0ef6e3c
+		summarizeBy: none
+		sourceColumn: order_key
+
+		annotation SummarizationSetBy = User
+
+	column customer_key
+		dataType: int64
+		formatString: 0
+		lineageTag: 9e86a8bf-8c53-4951-8948-b423033bdc05
+		summarizeBy: none
+		sourceColumn: customer_key
+
+		annotation SummarizationSetBy = User
+
+	column date_key
+		dataType: int64
+		formatString: 0
+		lineageTag: 1cd01b38-f589-48db-b0a1-e888a81a1ca2
+		summarizeBy: none
+		sourceColumn: date_key
+
+		annotation SummarizationSetBy = User
+
+	column geo_key
+		dataType: int64
+		formatString: 0
+		lineageTag: 6d165093-5f2b-43b4-ba5d-c8d76f4c7c7b
+		summarizeBy: none
+		sourceColumn: geo_key
+
+		annotation SummarizationSetBy = User
+
+	column channel_key
+		dataType: int64
+		formatString: 0
+		lineageTag: ac4535a7-21fb-4249-b750-0ac21191c25c
+		summarizeBy: none
+		sourceColumn: channel_key
+
+		annotation SummarizationSetBy = User
+
+	column payment_key
+		dataType: int64
+		formatString: 0
+		lineageTag: d8a76f96-d3bb-44d5-ba96-690d04ba31aa
+		summarizeBy: none
+		sourceColumn: payment_key
+
+		annotation SummarizationSetBy = User
+
+	column discount_rate_level_key
+		dataType: int64
+		formatString: 0
+		lineageTag: ca2bca0e-1fad-4dcd-a749-9054a6f414fd
+		summarizeBy: none
+		sourceColumn: discount_rate_level_key
+
+		annotation SummarizationSetBy = User
+
+	column flag_key
+		dataType: int64
+		formatString: 0
+		lineageTag: ab50a1b0-9ce5-4c06-91e1-49569eb99cb5
+		summarizeBy: none
+		sourceColumn: flag_key
+
+		annotation SummarizationSetBy = User
+
+	column campaign_key
+		dataType: string
+		lineageTag: 66dbaed3-3cbd-4b4c-b2b9-ac3280e0bae7
+		summarizeBy: none
+		sourceColumn: campaign_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_items
+		dataType: int64
+		formatString: 0
+		lineageTag: 71f0690c-4826-407b-8818-6243f8ebf5eb
+		summarizeBy: sum
+		sourceColumn: total_items
+
+		annotation SummarizationSetBy = Automatic
+
+	column unique_products
+		dataType: int64
+		formatString: 0
+		lineageTag: c4ead5a7-7b52-4e6f-8c8b-6997f02c98e5
+		summarizeBy: sum
+		sourceColumn: unique_products
+
+		annotation SummarizationSetBy = Automatic
+
+	column subtotal
+		dataType: double
+		lineageTag: 7fc65e4e-0d03-4c58-a5e0-ee6450e43896
+		summarizeBy: sum
+		sourceColumn: subtotal
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column discount_amount
+		dataType: double
+		lineageTag: b9325775-5713-42b2-855c-35b05c5c3d2e
+		summarizeBy: sum
+		sourceColumn: discount_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column discount_rate
+		dataType: double
+		lineageTag: 5922401a-477c-47ff-9a32-d6907d9a541b
+		summarizeBy: sum
+		sourceColumn: discount_rate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column shipping_cost
+		dataType: double
+		lineageTag: 0360f40d-9adf-4214-aebf-8d7cf97f7379
+		summarizeBy: sum
+		sourceColumn: shipping_cost
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column tax_amount
+		dataType: double
+		lineageTag: 3b9cd2d5-0c6d-46a9-9cb1-d85548e6e2d5
+		summarizeBy: sum
+		sourceColumn: tax_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column revenue
+		dataType: double
+		lineageTag: 4bf456d2-d939-461e-af2a-07c43f0f731c
+		summarizeBy: sum
+		sourceColumn: revenue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column profit
+		dataType: double
+		lineageTag: 916e7e81-051a-44ff-ab7d-9d15b99a6d6c
+		summarizeBy: sum
+		sourceColumn: profit
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column profit_margin
+		dataType: double
+		lineageTag: 8af0ce8c-df4d-4759-83b6-cd0e8349d1c4
+		summarizeBy: sum
+		sourceColumn: profit_margin
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column days_to_ship
+		dataType: string
+		lineageTag: 30d9124e-5c29-4edf-87c4-06800e66040f
+		summarizeBy: none
+		sourceColumn: days_to_ship
+
+		annotation SummarizationSetBy = Automatic
+
+	column days_to_deliver
+		dataType: string
+		lineageTag: 6dd7d8dd-b6bc-4f7a-8435-0fa82b122fca
+		summarizeBy: none
+		sourceColumn: days_to_deliver
+
+		annotation SummarizationSetBy = Automatic
+
+	column ship_to_delivery_days
+		dataType: string
+		lineageTag: d798035b-942e-43e9-acc6-633edbc9d032
+		summarizeBy: none
+		sourceColumn: ship_to_delivery_days
+
+		annotation SummarizationSetBy = Automatic
+
+	column order_date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 7683cd92-fa6f-4a55-bcfb-b1b18d42925c
+		summarizeBy: none
+		sourceColumn: order_date
+
+		variation Variation
+			isDefault
+			relationship: 74c3bf41-cd3f-4e75-86a0-4bc2dd53bcdf
+			defaultHierarchy: LocalDateTable_1a63d2bd-e358-48e5-b41d-598d1ae6cb36.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column ship_date
+		dataType: string
+		lineageTag: d3881ae2-96e2-4d77-a046-c0a3dc156ede
+		summarizeBy: none
+		sourceColumn: ship_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column delivery_date
+		dataType: string
+		lineageTag: 4816f369-351e-405c-9deb-7ed4c5f083f6
+		summarizeBy: none
+		sourceColumn: delivery_date
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fact_orders = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("D:\Data Career\Repos\Data_Science\E-Commerce_Orders_Analysis\data\processed\fact_orders.csv"),[Delimiter=",", Columns=25, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"order_key", Int64.Type}, {"customer_key", Int64.Type}, {"date_key", Int64.Type}, {"geo_key", Int64.Type}, {"channel_key", Int64.Type}, {"payment_key", Int64.Type}, {"discount_rate_level_key", Int64.Type}, {"flag_key", Int64.Type}, {"campaign_key", type text}, {"total_items", Int64.Type}, {"unique_products", Int64.Type}, {"subtotal", type number}, {"discount_amount", type number}, {"discount_rate", type number}, {"shipping_cost", type number}, {"tax_amount", type number}, {"revenue", type number}, {"profit", type number}, {"profit_margin", type number}, {"days_to_ship", type text}, {"days_to_deliver", type text}, {"ship_to_delivery_days", type text}, {"order_date", type date}, {"ship_date", type text}, {"delivery_date", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

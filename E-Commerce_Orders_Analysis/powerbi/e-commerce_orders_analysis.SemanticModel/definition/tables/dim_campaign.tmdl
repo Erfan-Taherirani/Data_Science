@@ -1,0 +1,32 @@
+table dim_campaign
+	lineageTag: 58e1c1d9-5dec-4b59-97a4-3b432f4d7af7
+
+	column campaign_key
+		dataType: int64
+		formatString: 0
+		lineageTag: fae72580-fc82-42d9-b824-46b96bc3a559
+		summarizeBy: none
+		sourceColumn: campaign_key
+
+		annotation SummarizationSetBy = User
+
+	column campaign
+		dataType: string
+		lineageTag: 96466573-e853-495b-9e25-68dc95101634
+		summarizeBy: none
+		sourceColumn: campaign
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_campaign = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("D:\Data Career\Repos\Data_Science\E-Commerce_Orders_Analysis\data\processed\dim_campaign.csv"),[Delimiter=",", Columns=2, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"campaign_key", Int64.Type}, {"campaign", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

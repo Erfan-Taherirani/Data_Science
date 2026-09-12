@@ -1,0 +1,101 @@
+table dim_dates
+	lineageTag: 6242d4e2-f294-4ce9-ade9-8a3dcfc4d3aa
+
+	column date_key
+		dataType: int64
+		formatString: 0
+		lineageTag: 6dc15bbf-9d03-4400-b61b-86999a5e3b27
+		summarizeBy: none
+		sourceColumn: date_key
+
+		annotation SummarizationSetBy = User
+
+	column order_date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: c769a7a4-d143-432f-92d1-5197bf804bb9
+		summarizeBy: none
+		sourceColumn: order_date
+
+		variation Variation
+			isDefault
+			relationship: 8d86046f-2927-47d9-ab1b-8d6f0dcdddb4
+			defaultHierarchy: LocalDateTable_7f2d50f1-2fc0-4370-9bc9-74847695eb59.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column month_name
+		dataType: string
+		lineageTag: 72695ccd-a1a4-469b-a5b2-ee41476f4d12
+		summarizeBy: none
+		sourceColumn: month_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column day_name
+		dataType: string
+		lineageTag: f64f1364-4352-4975-af59-18cf22f125ec
+		summarizeBy: none
+		sourceColumn: day_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column year
+		dataType: int64
+		formatString: 0
+		lineageTag: baf6c9a8-e2fb-42b5-a73d-34a6358b5674
+		summarizeBy: sum
+		sourceColumn: year
+
+		annotation SummarizationSetBy = Automatic
+
+	column month
+		dataType: int64
+		formatString: 0
+		lineageTag: ba949d4f-1114-446e-af53-111fbcd73646
+		summarizeBy: sum
+		sourceColumn: month
+
+		annotation SummarizationSetBy = Automatic
+
+	column week
+		dataType: int64
+		formatString: 0
+		lineageTag: 2ffde896-007a-4334-813c-d02360027f4a
+		summarizeBy: sum
+		sourceColumn: week
+
+		annotation SummarizationSetBy = Automatic
+
+	column week_day
+		dataType: int64
+		formatString: 0
+		lineageTag: 163db175-f6c2-476a-adc2-f2bd7fe02422
+		summarizeBy: sum
+		sourceColumn: week_day
+
+		annotation SummarizationSetBy = Automatic
+
+	column day
+		dataType: int64
+		formatString: 0
+		lineageTag: 30b0f7d2-dcd7-4174-9ff5-73eb5e88e377
+		summarizeBy: sum
+		sourceColumn: day
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_dates = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("D:\Data Career\Repos\Data_Science\E-Commerce_Orders_Analysis\data\processed\dim_dates.csv"),[Delimiter=",", Columns=9, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"date_key", Int64.Type}, {"order_date", type date}, {"month_name", type text}, {"day_name", type text}, {"year", Int64.Type}, {"month", Int64.Type}, {"week", Int64.Type}, {"week_day", Int64.Type}, {"day", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

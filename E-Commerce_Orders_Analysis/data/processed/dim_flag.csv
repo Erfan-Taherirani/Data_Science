@@ -1,0 +1,21 @@
+flag_key,shipping_method,delivery_status
+1,economy,delayed
+2,economy,in transit
+3,economy,not shipped
+4,economy,on time
+5,economy,returned
+6,express,delayed
+7,express,in transit
+8,express,not shipped
+9,express,on time
+10,express,returned
+11,same-day,delayed
+12,same-day,in transit
+13,same-day,not shipped
+14,same-day,on time
+15,same-day,returned
+16,standard,delayed
+17,standard,in transit
+18,standard,not shipped
+19,standard,on time
+20,standard,returned

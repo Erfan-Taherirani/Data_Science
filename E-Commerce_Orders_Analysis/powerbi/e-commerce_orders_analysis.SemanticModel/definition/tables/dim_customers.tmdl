@@ -1,0 +1,48 @@
+table dim_customers
+	lineageTag: 2542f96b-4cd5-4d08-b161-24c8e9a11373
+
+	column customer_key
+		dataType: int64
+		formatString: 0
+		lineageTag: a9b057b5-3c3c-4829-a068-6982dceb7789
+		summarizeBy: none
+		sourceColumn: customer_key
+
+		annotation SummarizationSetBy = User
+
+	column customer_id
+		dataType: string
+		lineageTag: d3b94381-8253-48aa-a1ba-3e69612e9548
+		summarizeBy: none
+		sourceColumn: customer_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column customer_name
+		dataType: string
+		lineageTag: 967c94af-7a1b-4048-977f-e8df1283f4db
+		summarizeBy: none
+		sourceColumn: customer_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column customer_segment
+		dataType: string
+		lineageTag: 3a34d525-c0db-42ba-9ba7-36dbdf3cdcc7
+		summarizeBy: none
+		sourceColumn: customer_segment
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_customers = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("D:\Data Career\Repos\Data_Science\E-Commerce_Orders_Analysis\data\processed\dim_customers.csv"),[Delimiter=",", Columns=4, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"customer_key", Int64.Type}, {"customer_id", type text}, {"customer_name", type text}, {"customer_segment", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

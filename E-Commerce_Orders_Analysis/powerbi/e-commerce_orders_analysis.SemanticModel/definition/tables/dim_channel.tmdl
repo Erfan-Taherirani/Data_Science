@@ -1,0 +1,40 @@
+table dim_channel
+	lineageTag: c1b7ca26-9548-49ad-b261-82b1cddb9df7
+
+	column channel_key
+		dataType: int64
+		formatString: 0
+		lineageTag: 4179b7e3-2837-4a44-b9dd-a76ec43c19aa
+		summarizeBy: none
+		sourceColumn: channel_key
+
+		annotation SummarizationSetBy = User
+
+	column sales_channel
+		dataType: string
+		lineageTag: 29548e2d-74bf-4a60-b1ed-587b94e6c8ba
+		summarizeBy: none
+		sourceColumn: sales_channel
+
+		annotation SummarizationSetBy = Automatic
+
+	column customer_acquisition_channel
+		dataType: string
+		lineageTag: 3bce3edb-1941-4816-a522-c1fa7e4cc250
+		summarizeBy: none
+		sourceColumn: customer_acquisition_channel
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_channel = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("D:\Data Career\Repos\Data_Science\E-Commerce_Orders_Analysis\data\processed\dim_channel.csv"),[Delimiter=",", Columns=3, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"channel_key", Int64.Type}, {"sales_channel", type text}, {"customer_acquisition_channel", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+
