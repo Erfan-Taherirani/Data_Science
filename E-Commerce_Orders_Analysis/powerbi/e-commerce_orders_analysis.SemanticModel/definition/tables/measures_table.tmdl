@@ -1,0 +1,35 @@
+table measures_table
+	lineageTag: 5c47f313-1c4d-401c-9046-476227566b8e
+
+	measure 'Revenue per Item' = SUM(fact_orders[revenue]) / SUM(fact_orders[total_items])
+		lineageTag: d685ef82-9077-48d3-ba8f-18100d73088c
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure AOV = SUM(fact_orders[revenue]) / COUNT(fact_orders[order_key])
+		lineageTag: 1a10100c-3807-4543-b136-b7e540d6faee
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Profit Margin' = SUM(fact_orders[profit]) / SUM(fact_orders[revenue])
+		lineageTag: b8b20e15-1d3e-42de-bee5-e6dde996aa9c
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Column
+		formatString: 0
+		lineageTag: 4cc5f97e-3a93-464d-bfb0-8c31efb1c0c4
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Column]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition measures_table = calculated
+		mode: import
+		source = Row("Column", BLANK())
+
+	annotation PBI_Id = d7ea18055ee944ab9f30c6fedb8f5f6c
+
+	annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":""}
+

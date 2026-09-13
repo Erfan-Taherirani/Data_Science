@@ -25,6 +25,7 @@ ref table dim_discount_rate_level
 ref table dim_flag
 ref table dim_geo
 ref table dim_payment
+ref table measures_table
 
 ref cultureInfo en-US
 

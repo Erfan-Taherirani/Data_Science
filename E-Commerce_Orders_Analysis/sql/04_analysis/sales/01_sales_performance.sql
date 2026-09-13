@@ -9,11 +9,3 @@ SELECT
     ROUND(SUM(profit) / SUM(revenue) * 100, 2) AS profit_margin,
     ROUND(SUM(profit) / SUM(revenue), 3) AS profit_contribution_per_1_dollar_revenue
 FROM orders.fact_orders
-
--- SELECT
---     order_key,
---     revenue,
---     total_items,
---     profit,
---     profit_margin
--- FROM orders.fact_ordersS
