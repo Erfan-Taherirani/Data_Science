@@ -130,8 +130,11 @@ This project follows a structured 14-phase workflow (see [`docs/workflow.md`](do
 
 ## Contact
 
-**Author:** [Your Name] — Senior Data Analyst  
-**LinkedIn:** [your-profile] • **Email:** [your-email]
+**Author:** Erfan Taherirani — Junior Data Analyst
+
+**LinkedIn:** [LinkedIn](https://www.linkedin.com/in/erfan-taherirani)
+
+**Email:** e.taherirani81@gmail.com
 
 ---
 
