@@ -1,0 +1,4 @@
+rank,customer_segment,revenue,orders,orders_percentage,AOV,profit,profit_margin
+1,consumer,3502369.34,29863,60.8,117.28,996450.15,0.285
+2,corporate,1381347.41,11789,24.0,117.17,393251.88,0.285
+3,small business,871406.54,7441,15.2,117.11,247627.19,0.284
