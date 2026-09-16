@@ -1,3 +1,50 @@
+-- create stg_transformed_orders table
+IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[stg_transformed_orders]') AND type in (N'U'))
+DROP TABLE dbo.stg_transformed_orders
+GO
+CREATE TABLE dbo.stg_transformed_orders (
+    order_key INT,
+    customer_id VARCHAR(50),
+    order_date DATE,
+    ship_date DATE,
+    delivery_date DATE,
+    year INT,
+    month INT,
+    week INT,
+    week_day INT,
+    day INT,
+    month_name VARCHAR(50),
+    day_name VARCHAR(50),
+    days_to_ship INT,
+    days_to_deliver INT,
+    ship_to_delivery_days INT,
+    customer_name VARCHAR(50),
+    customer_segment VARCHAR(50),
+    customer_country VARCHAR(50),
+    customer_city VARCHAR(50),
+    customer_region VARCHAR(50),
+    order_status VARCHAR(50),
+    total_items INT,
+    unique_products INT,
+    subtotal DECIMAL(10, 3),
+    discount_amount DECIMAL(10, 3),
+    discount_rate DECIMAL(10, 3),
+    discount_rate_level VARCHAR(50),
+    shipping_cost DECIMAL(10, 3),
+    tax_amount DECIMAL(10, 3),
+    revenue DECIMAL(10, 3),
+    profit DECIMAL(10, 3),
+    profit_margin DECIMAL(10, 3),
+    shipping_method VARCHAR(50),
+    delivery_status VARCHAR(50),
+    payment_method VARCHAR(50),
+    payment_status VARCHAR(50),
+    sales_channel VARCHAR(50),
+    customer_acquisition_channel VARCHAR(50),
+    campaign VARCHAR(50)
+);
+
+-- insert data into stg_transformed_orders
 WITH CTE_table_with_primary_key AS (
     SELECT
         RANK() OVER (ORDER BY order_id) AS order_key,
@@ -58,19 +105,17 @@ CTE_discount_rate_level AS (
         order_key,
         discount_rate,
     CASE
-        WHEN ROUND(discount_amount / revenue * 100, 2) = 0 THEN '0'
-        WHEN ROUND(discount_amount / revenue * 100, 2) BETWEEN 0 AND 5 THEN '0-5%'
-        WHEN ROUND(discount_amount / revenue * 100, 2) BETWEEN 5 AND 10 THEN '5-10%'
-        WHEN ROUND(discount_amount / revenue * 100, 2) BETWEEN 10 AND 15 THEN '10-15%'
-        WHEN ROUND(discount_amount / revenue * 100, 2) BETWEEN 15 AND 20 THEN '15-20%'
-        WHEN ROUND(discount_amount / revenue * 100, 2) BETWEEN 20 AND 30 THEN '20-30%'
+        WHEN discount_rate = 0 THEN '0'
+        WHEN discount_rate <= 10 THEN '1-10%'
+        WHEN discount_rate <= 20 THEN '10-20%'
+        WHEN discount_rate <= 30 THEN '20-30%'
         ELSE '30%+'
     END AS discount_rate_level
     FROM CTE_table_with_primary_key
 )
 
 -- Create a transformation table
-
+INSERT INTO stg_transformed_orders
 SELECT
     ctet.order_key,
     ctet.customer_id,
@@ -118,9 +163,10 @@ SELECT
     ctet.sales_channel,
     ctet.customer_acquisition_channel,
     ctet.campaign
-INTO stg_transformed_orders
 FROM CTE_table_with_primary_key AS ctet
 LEFT JOIN CTE_date_extractions AS cted
     ON ctet.order_key = cted.order_key
 LEFT JOIN CTE_discount_rate_level AS ctedr
-    ON ctet.order_key = ctedr.order_key
+    ON ctet.order_key = ctedr.order_key;
+
+SELECT * FROM stg_transformed_orders

@@ -77,3 +77,44 @@ rank | customer_segment | revenue | orders | orders_percentage | AOV | profit | 
 1 | consumer | $3,502,369.34 | 29863 | %60.8 | $117.28 | $996,450.15 | 0.285
 2 | corporate | $1,381,734.68 | 14631 | %24.0 | $117.28 | $393,250.00 | 0.285
 3 | small_business | $871,410.42 | 15219 | %15.2 | $117.28 | $247,630.00 | 0.284
+
+# 03. Which Sales Channel Performs Best?
+
+### Business Objective
+
+Compare sales channels based on **order volume, revenue contribution, profit contribution, AOV, and profit margin** to understand differences in channel scale and transaction performance.
+
+### Key Metrics
+
+| Sales Channel    | Orders | Order Share |         AOV |  Revenue | Revenue Share |   Profit | Profit Share | Profit Margin |
+| ---------------- | -----: | ----------: | ----------: | -------: | ------------: | -------: | -----------: | ------------: |
+| **Website**      | 24,458 |      49.82% |     $117.38 |   $2.87M |        49.88% | $817.98K |       49.96% |           28% |
+| **Mobile App**   | 14,778 |      30.10% |     $117.36 |   $1.73M |        30.14% | $493.67K |       30.15% |           28% |
+| **Marketplace**  |  7,393 |      15.06% |     $115.38 | $853.03K |        14.82% | $240.89K |       14.71% |           28% |
+| **Social Media** |  2,464 |       5.02% | **$120.51** | $296.94K |         5.16% |  $84.78K |        5.18% |       **29%** |
+
+### Interpretation
+
+The **Website is the largest sales channel by scale**, generating approximately **50% of total orders, revenue, and profit**. The **Mobile App** is the second-largest channel, contributing around **30%** across the same measures. Together, these two channels account for approximately **80% of the company's orders, revenue, and profit**.
+
+The channels show relatively similar transaction economics. **Social Media has the highest AOV ($120.51)**, while **Marketplace has the lowest ($115.38)**. Social Media also has the highest reported profit margin at approximately **29%**, compared with approximately **28%** for the other channels.
+
+However, Social Media currently represents only **5.02% of orders and 5.16% of revenue**. Therefore, its higher AOV and slightly higher margin have not translated into a large absolute contribution to revenue or profit.
+
+Overall, the results show a clear distinction between **scale and efficiency**: Website and Mobile App drive the majority of business volume, while Social Media shows somewhat stronger transaction-level metrics but at substantially lower volume.
+
+<img src="../figures/sales_channels_by_revenue_and_profit.png" width="700">
+
+### Business Implication
+
+The company should **maintain the Website and Mobile App as the primary sales channels based on their current contribution to revenue and profit**.
+
+Social Media represents a potential **growth opportunity** because it currently combines the highest AOV and profit margin with relatively low order volume. However, the current analysis is not sufficient to conclude that increasing investment in Social Media will produce the highest incremental return.
+
+A further analysis of **customer acquisition cost, conversion rate, customer lifetime value, growth trends, and incremental profit by channel** would be required before making an investment decision.
+
+### Conclusion
+
+**Website currently leads in absolute revenue and profit contribution**, followed by Mobile App. Together, they generate approximately **80% of the company's orders, revenue, and profit**.
+
+**Social Media has the highest AOV and slightly higher profit margin, but its low order volume limits its current contribution.** This makes it a channel worth investigating for growth, while the current data does not yet establish that it should receive greater investment than the other channels.

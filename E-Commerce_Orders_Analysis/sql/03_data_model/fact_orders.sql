@@ -100,12 +100,10 @@ CTE_dim_discount_rate_level AS (
     SELECT
         CASE
             WHEN discount_rate_level = '0' THEN 1
-            WHEN discount_rate_level = '0-5%' THEN 2
-            WHEN discount_rate_level = '5-10%' THEN 3
-            WHEN discount_rate_level = '10-15%' THEN 4
-            WHEN discount_rate_level = '15-20%' THEN 5
-            WHEN discount_rate_level = '20-30%' THEN 6
-            WHEN discount_rate_level = '30%+' THEN 7
+            WHEN discount_rate_level = '1-10%' THEN 2
+            WHEN discount_rate_level = '10-20%' THEN 3
+            WHEN discount_rate_level = '20-30%' THEN 4
+            WHEN discount_rate_level = '30%+' THEN 5
         END AS discount_rate_level_key,
         discount_rate_level
     FROM stg_transformed_orders
