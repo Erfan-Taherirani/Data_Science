@@ -4,12 +4,17 @@ This module contains the code for exploratory data analysis.
 functions:
     load_data: Loads the data from the raw data file.
 	validate_data: Validates the data.
+	get_categorical_and_numerical_features: Get categorical and numerical features from DataFrame
+	get_minutes_stats: Get minute stats
+	get_call_stats: Get call stats
+	get_charge_stats: Get charge stats
 """
-
 import numpy as np
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
+
+from utils.eda import describe_stats
 
 
 def load_data(
@@ -96,3 +101,63 @@ def validate_data(df: pd.DataFrame) -> str:
 	assert sum(df['customer_service_calls'] < 0) == 0, "Customer service calls should be positive"
 	
 	return "Data is valid"
+
+
+def get_categorical_and_numerical_features(df: pd.DataFrame) -> tuple[list[str], list[str]]:
+	"""Get categorical and numerical features from DataFrame
+
+	:param df: DataFrame
+	:return: categorical_features, numerical_features
+	"""
+	categorical_features = [
+		"state", "area_code", "international_plan", "voice_mail_plan", "churn"
+	]
+
+	numerical_features = []
+	for feature in df.columns:
+		if feature not in categorical_features:
+			numerical_features.append(feature)
+
+	return categorical_features, numerical_features
+
+
+def get_minutes_stats(df: pd.DataFrame) -> pd.DataFrame:
+	""" Get minute stats
+
+	:param df: Dataframe containing the data
+	:return: A dataframe containing minute stats
+	"""
+	minutes_df = describe_stats(df, "total_day_minutes").rename(columns={"Value": "total_day_minutes"})
+	minutes_df['total_eve_minutes'] = describe_stats(df, "total_eve_minutes")
+	minutes_df['total_night_minutes'] = describe_stats(df, "total_night_minutes")
+	minutes_df['total_intl_minutes'] = describe_stats(df, "total_intl_minutes")
+
+	return minutes_df
+
+
+def get_call_stats(df: pd.DataFrame) -> pd.DataFrame:
+	""" Get call stats
+
+	:param df: Dataframe containing the data
+	:return: A dataframe containing call stats
+	"""
+	minutes_df = describe_stats(df, "total_day_calls").rename(columns={"Value": "total_day_calls"})
+	minutes_df['total_eve_calls'] = describe_stats(df, "total_eve_calls")
+	minutes_df['total_night_calls'] = describe_stats(df, "total_night_calls")
+	minutes_df['total_intl_calls'] = describe_stats(df, "total_intl_calls")
+
+	return minutes_df
+
+
+def get_charge_stats(df: pd.DataFrame) -> pd.DataFrame:
+	""" Get charge stats
+
+	:param df: Dataframe containing the data
+	:return: A dataframe containing charge stats
+	"""
+	minutes_df = describe_stats(df, "total_day_charge").rename(columns={"Value": "total_day_charge"})
+	minutes_df['total_eve_charge'] = describe_stats(df, "total_eve_charge")
+	minutes_df['total_night_charge'] = describe_stats(df, "total_night_charge")
+	minutes_df['total_intl_charge'] = describe_stats(df, "total_intl_charge")
+
+	return minutes_df
