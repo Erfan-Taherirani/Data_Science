@@ -8,6 +8,8 @@ functions:
 	get_minutes_stats: Get minute stats
 	get_call_stats: Get call stats
 	get_charge_stats: Get charge stats
+	get_divided_data: Divides the data into different groups based on the value of the column specified.
+	get_churn_rate: Calculates the churn rate for each group of data based on the number of customer service calls.
 """
 import numpy as np
 import pandas as pd
@@ -161,3 +163,111 @@ def get_charge_stats(df: pd.DataFrame) -> pd.DataFrame:
 	minutes_df['total_intl_charge'] = describe_stats(df, "total_intl_charge")
 
 	return minutes_df
+
+
+def get_divided_data(df: pd.DataFrame, based_on: str) -> dict:
+	"""
+	Divides the data into different groups based on the value of the column
+	specified in the 'based_on' parameter.
+
+	:param df: The DataFrame to be divided.
+	:param based_on: The column name to be used as the basis for the division.
+	:return: A dictionary where the keys are the unique values of the
+			 column specifiedin the 'based_on' parameter and the values
+			 are the DataFrames that correspond to each unique value.
+	"""
+	divided_data = {}
+	unique_values = df[based_on].unique()
+	for value in unique_values:
+		divided_data[value] = df.loc[df[based_on] == value] # Create a new DataFrame for each unique value
+
+	return divided_data
+
+
+def get_churn_rate(divided_data: dict) -> dict:
+	"""
+	Calculates the churn rate for each group of data based on the number of customer service calls.
+
+	:param divided_data: A dictionary where the keys are the unique values of the column specified
+						 in the 'based_on' parameter and the values are the DataFrames that correspond
+						 to each unique value.
+	:return: A dictionary where the keys are the unique values of the column specified
+			 in the 'based_on' parameter and the values are the churn rates for each group.
+	"""
+	churn_rates = {}
+	for value, df in divided_data.items():
+		if len(df['churn'].value_counts().values) == 2:
+			churn_rate = df['churn'].value_counts().values[1] / df.shape[0] * 100 # Get the churn rate for the group
+			churn_rates[value] = round(churn_rate, 2)
+		else:
+			churn_rate = 100
+			churn_rates[value] = churn_rate
+
+	return churn_rates
+
+
+def get_churned_customers(df: pd.DataFrame) -> pd.DataFrame:
+	""" Get churned customers
+
+	:param df: Dataframe containing the data
+	:return: A dataframe containing churned customers
+	"""
+	df = df.loc[df['churn'] == True]
+	return df
+
+
+def get_stayed_customers(df: pd.DataFrame) -> pd.DataFrame:
+	""" Get stayed customers
+
+	:param df: Dataframe containing the data
+	:return: A dataframe containing stayed customers
+	"""
+	df = df.loc[df['churn'] == False]
+	return df
+
+
+def describe_total_day_minutes(df: pd.DataFrame) -> pd.DataFrame:
+	""" Describe total day minutes
+
+	:param df: Dataframe containing the data
+	:return: A dataframe containing total day minutes
+	"""
+	df_stats = describe_stats(get_churned_customers(df), "total_day_minutes").rename(
+		columns={"Value": "total_day_minutes_churned"}
+	)
+	df_stats['total_day_minutes_stayed'] = describe_stats(
+		get_stayed_customers(df), "total_day_minutes"
+	)
+
+	return df_stats
+
+
+def describe_international_calls(df: pd.DataFrame) -> pd.DataFrame:
+	""" Describe international calls
+
+	:param df: Dataframe containing the data
+	:return: A dataframe containing international calls
+	"""
+	df_intl = describe_stats(get_churned_customers(df), "total_intl_minutes").rename(
+		columns={"Value": "Total International Minutes Churned"}
+	)
+	df_intl['Total International Minutes Not Churned'] = describe_stats(get_stayed_customers(df), "total_intl_minutes")
+	return df_intl
+
+
+def get_account_length_info(df: pd.DataFrame) -> None:
+	""" Get account length info by churn status
+
+	:param df: DataFrame
+	:return: None
+	"""
+	df_churned = get_churned_customers(df)['account_length']
+	df_not_churned = get_stayed_customers(df)['account_length']
+
+	mean_churned = df_churned.mean()
+	std_churned = df_churned.std()
+	mean_not_churned = df_not_churned.mean()
+	std_not_churned = df_not_churned.std()
+	
+	print(f"Account length for churned customers: {mean_churned:.2f} +/- {std_churned:.2f}")
+	print(f"Account length for stayed customers: {mean_not_churned:.2f} +/- {std_not_churned:.2f}")
