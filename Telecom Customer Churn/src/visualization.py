@@ -7,6 +7,9 @@ functions:
     plot_call_counts: Plot the distribution of call counts for different time of the day and international calls.
     plot_charge_distributions: Plot the distribution of charge for different time of the day and international calls.
     plot_correlation: Plot the correlation matrix
+	plot_churn_rates: Plot the churn rates
+	plot_churn_rate_by_customer_service_calls: Plot the churn rate by customer service calls
+	plot_state_churn_rates: Plot the churn rate by state
 """
 import numpy as np
 import pandas as pd
@@ -176,9 +179,10 @@ def plot_correlation(df: pd.DataFrame) -> None:
 		fmt=".2f",
 		cmap="Blues",
 		ax=ax,
+		cbar=False
 	)
 
-	ax.set_title("Correlation Matrix")
+	ax.set_title("Absolute Correlation Matrix")
 	plt.show()
 
 
@@ -202,18 +206,26 @@ def plot_churn_rate_by_customer_service_calls(df: pd.DataFrame) -> None:
 		return churn_rates
 
 	churn_rates = get_cutomer_service_calls_churn_rate(df)
-	sns.lineplot(
+
+	sns.barplot(
+		y=churn_rates,
+		x=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+		color="darkorange",
+	)
+	sns.pointplot(
 		y=churn_rates,
 		x=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
 		marker='o',
-		markersize=8,
-		linestyle='-',
-		label='Churn Rate'
+		markersize=5,
+		linestyle='--',
+		label='Churn Rate Trend',
+		color="black"
 	)
+
 	plt.title('Churn Rates by Customer Service Calls')
 	plt.xlabel('Number of Customer Service Calls')
-	plt.ylabel('Churn Rate')
-	plt.grid(True, linestyle='-', alpha=0.5)
+	plt.ylabel('Churn Rate (%)')
+	plt.grid(True, linestyle='--', alpha=0.3, color='grey', axis='y')
 	plt.legend()
 	plt.show()
 
@@ -242,13 +254,6 @@ def plot_state_churn_rates(df: pd.DataFrame) -> None:
 	_, ax = plt.subplots(figsize=(8, 10))
 
 	sns.barplot(y=values, x=churn_rates)
-
-	plt.axvline(x=25, color='red', linestyle='--')
-	plt.axvline(x=15, color='red', linestyle='--')
-	plt.text(
-		x=20, y=18, s="Critical Threshold", ha='center', va="center",
-		color='red', fontsize=12
-	)
 	sns.barplot(
 		y=["NJ", "TX"],
 		x=[churn_rates[2], churn_rates[14]],
@@ -259,4 +264,40 @@ def plot_state_churn_rates(df: pd.DataFrame) -> None:
 	ax.set_xlabel("Churn Rate (%)")
 	ax.set_ylabel("State")
 	ax.grid(True, axis='x', linestyle='--', color='grey', alpha=0.5)
+	plt.show()
+
+
+def plot_high_usage_churn_rates(df_high_usage: pd.DataFrame) -> None:
+	""" Plot the churn rate by customer service calls
+
+	:param df: DataFrame
+	:return: None
+	"""
+	def get_high_usage_customers_churn_rates(df_high_usage):
+		divided_data = get_divided_data(df_high_usage, based_on="customer_service_calls")
+		churn_rates = get_churn_rate(divided_data)
+
+		return churn_rates
+
+	high_usage_churn_rates = get_high_usage_customers_churn_rates(df_high_usage)
+	sns.barplot(
+		x=list(high_usage_churn_rates.keys()),
+		y=list(high_usage_churn_rates.values()),
+		color="darkorange",
+	)
+	sns.pointplot(
+		x=list(high_usage_churn_rates.keys()),
+		y=list(high_usage_churn_rates.values()),
+		marker='*',
+		markersize=5,
+		linestyle='--',
+		label='Churn Rate Trend',
+		color="grey"
+	)
+
+	plt.title('Churn Rates of High Usage Customers by Customer Service Calls')
+	plt.xlabel('Number of Customer Service Calls')
+	plt.ylabel('Churn Rate (%)')
+	plt.grid(True, linestyle='--', alpha=0.3, color='grey', axis='y')
+	plt.legend()
 	plt.show()
