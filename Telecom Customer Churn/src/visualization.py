@@ -10,6 +10,11 @@ functions:
 	plot_churn_rates: Plot the churn rates
 	plot_churn_rate_by_customer_service_calls: Plot the churn rate by customer service calls
 	plot_state_churn_rates: Plot the churn rate by state
+	plot_high_usage_churn_rates: Plot the churn rate by customer service calls
+	plot_cs_calls_by_churn_status: Plot the churn rate by customer service calls
+	plot_usage_by_vmail_plan: Plot the mean daytime usage by voicemail plan
+	plot_daytime_usage_dist_by_churn_status: Plot the mean daytime usage by churn status
+	plot_mean_daytime_usage_by_churn_status: Plot the mean daytime usage by churn status
 """
 import numpy as np
 import pandas as pd
@@ -301,3 +306,80 @@ def plot_high_usage_churn_rates(df_high_usage: pd.DataFrame) -> None:
 	plt.grid(True, linestyle='--', alpha=0.3, color='grey', axis='y')
 	plt.legend()
 	plt.show()
+
+
+def plot_cs_calls_by_churn_status(df):
+	sns.countplot(
+		data=df,
+		x="customer_service_calls",
+		hue="churn",
+		stat="percent"
+	)
+
+	plt.title("Customer service calls by churn status")
+	plt.xlabel("Customer service calls")
+	plt.ylabel("Percent (%)")
+	plt.legend(loc="upper right")
+	plt.grid(True, linestyle='--', alpha=0.3, color='grey', axis='y')
+
+	plt.show()
+
+
+def plot_usage_by_vmail_plan(df):
+    sns.barplot(
+        data=df,
+        x="voice_mail_plan",
+        y="total_day_minutes",
+        hue="churn",
+        capsize=0.02,
+    )
+    plt.title("Mean Daytime Usage by Voicemail Plan")
+    plt.xlabel("Voicemail Plan")
+    plt.ylabel("Mean Daytime Usage (minutes)")
+    plt.grid(True, linestyle="--", alpha=0.3, color="grey", axis="y")
+    plt.show()
+
+
+def plot_daytime_usage_dist_by_churn_status(df):
+    sns.histplot(
+        data=df,
+        x="total_day_minutes",
+        hue="churn",
+	)
+    plt.title('Daytime Usage Distribution by Churn Status')
+    plt.xlabel('Daytime Usage (Minutes)')
+    plt.ylabel('Count')
+    plt.show()
+
+
+def plot_mean_daytime_usage_by_churn_status(df):
+    """ Plot the mean daytime usage by churn status
+
+    :param df: DataFrame
+    :return: None
+    """
+    sns.barplot(
+        data=df,
+        x="churn",
+        y="total_day_minutes",
+        color="darkorange",
+        capsize=0.02,
+        err_kws={"color": "black", "linewidth": 2}
+	)
+    sns.pointplot(
+        data=df,
+        x="churn",
+        y="total_day_minutes",
+        color="black",
+        linestyle="--",
+        markers="*",
+        markersize=3,
+        err_kws={"color": "black", "linewidth": 2}
+    )
+
+    plt.title('Mean Daytime Usage by Churn Status')
+    plt.xlabel('Churn Status')
+    plt.ylabel('Mean Daytime Usage (Minutes)')
+    plt.grid(True, linestyle='--', alpha=0.3, color='grey', axis='y')
+    plt.tight_layout()
+    plt.show()

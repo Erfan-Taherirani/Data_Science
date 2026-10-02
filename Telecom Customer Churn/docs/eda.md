@@ -218,10 +218,10 @@ Observed churn rates by number of customer-service calls:
 
 | Service calls | Churn rate | Sample size |
 | ------------: | ---------: | ----------: |
-|             0 |     14.23% |           — |
-|             1 |     10.48% |           — |
-|             2 |     10.20% |           — |
-|             3 |     10.63% |           — |
+|             0 |     14.23% |         555 |
+|             1 |     10.48% |         945 |
+|             2 |     10.20% |         608 |
+|             3 |     10.63% |         348 |
 |         **4** | **48.12%** |     **133** |
 |             5 |     40.82% |          49 |
 |             6 |     41.18% |          17 |
@@ -547,8 +547,6 @@ The model evaluation should focus on:
 
 The ultimate objective should be to identify customers with elevated churn risk while controlling the cost of unnecessary retention interventions.
 
-<img src="../figures/absolute_correlation_matrix.png">
-
 ---
 
 # 16. Final Conclusion
@@ -569,21 +567,39 @@ The EDA therefore provides a clear foundation for the next stage:
 
 ---
 
-## Appendix A — Recommended Figures
+## Appendix A — Figures
 
-The final report should reuse the strongest existing notebook visuals rather than reproduce every EDA chart:
+1. **Overall churn distribution**
 
-1. Overall churn distribution
-2. Daytime usage distribution by churn status
-3. International-plan churn rate
-4. Voicemail-plan churn rate
-5. Customer-service calls vs churn rate
-6. State-level churn rates
-7. Usage × voicemail-plan comparison
-8. High-usage customers × customer-service calls
-9. Correlation matrix
+<img src="../figures/churn_rate_distribution.png">
 
-Detailed distribution charts for evening, night and charge variables can remain in the notebook or technical appendix unless they contribute directly to a business finding.
+2. **Daytime usage distribution by churn status**
+
+<img src="../figures/daytime_usage_distribution_by_churn_status.png">
+
+3. **International-plan churn rate**
+
+<img src="../figures/international_plan_by_churn_status.png">
+
+4. **Voicemail-plan churn rate**
+
+<img src="../figures/voice_mail_plan_by_churn_status.png">
+
+5. **Customer-service calls vs churn rate**
+
+<img src="../figures/cutomer_service_calls_by_churn_status.png">
+
+6. **State-level churn rates**
+
+<img src="../figures/state_churn_rates.png">
+
+7. **Usage × voicemail-plan comparison**
+
+<img src="../figures/mean_daytime_usage_by_vmail_plan.png">
+
+9. **Correlation matrix**
+
+<img src="../figures/absolute_correlation_matrix.png">
 
 ---
 
