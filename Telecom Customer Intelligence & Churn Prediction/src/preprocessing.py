@@ -32,6 +32,22 @@ def save_processed_data():
 
 	df.to_csv("../data/processed/df_processed.csv", index=False)
 
+def save_test_processed_data():
+	"""
+	This function preprocessed the test dataset and save it 
+	as csv file in the data folder.
+	"""
+	df = load_data("../data/raw/churn-bigml-20.csv")
+    
+    # drop non-informative columns
+	df = df.drop(columns=["state"])
+	df['area_code'] = df['area_code'].cat.codes
+	df['international_plan'] = df['international_plan'].cat.codes
+	df['voice_mail_plan'] = df['voice_mail_plan'].cat.codes
+
+    # save test data
+	df.to_csv("../data/processed/df_test_processed.csv", index=False)
+
 
 def add_aggregate_usage_features(df: pd.DataFrame) -> pd.DataFrame:
     """
@@ -70,15 +86,22 @@ def add_usage_share_features(df: pd.DataFrame) -> pd.DataFrame:
     df['avg_day_minutes_per_call'] = (
 		df['total_day_minutes'] / df['total_day_calls']
 	)
+    df['avg_day_minutes_per_call'] = df['avg_day_minutes_per_call'].fillna(0)
+
     df['avg_eve_minutes_per_call'] = (
 		df['total_eve_minutes'] / df['total_eve_calls']
 	)
+    df['avg_eve_minutes_per_call'] = df['avg_eve_minutes_per_call'].fillna(0)
+
     df['avg_night_minutes_per_call'] = (
 		df['total_night_minutes'] / df['total_night_calls']
 	)
+    df['avg_night_minutes_per_call'] = df['avg_night_minutes_per_call'].fillna(0)
+
     df['avg_intl_minutes_per_call'] = (
 		df['total_intl_minutes'] / df['total_intl_calls']
-	)
+    )
+    df['avg_intl_minutes_per_call'] = df['avg_intl_minutes_per_call'].fillna(0)
 
     return df
 
@@ -123,17 +146,17 @@ def add_customer_service_and_interaction_features(df: pd.DataFrame) -> pd.DataFr
 	)
 
 	# interaction features
-    df['international_plan_service_risk '] = (
-        (df['international_plan'] == "yes") &
+    df['international_plan_service_risk'] = (
+        (df['international_plan'] == 1) &
         (df['customer_service_calls'] > 4)
 	)
-    df['high_usage_service_risk '] = (
+    df['high_usage_service_risk'] = (
         (df['total_day_minutes'] > df['total_day_minutes'].mean()) &
         (df['customer_service_calls'] > 4)
 	)
     df['intl_plan_no_vmail'] = (
-        (df['international_plan'] == "yes") &
-        (df['voice_mail_plan'] == "no")
+        (df['international_plan'] == 1) &
+        (df['voice_mail_plan'] == 0)
 	)
 
     return df
@@ -164,22 +187,29 @@ def get_df_engineered(df: pd.DataFrame) -> pd.DataFrame:
     df['day_charge_per_minute'] = (
         df['total_day_charge'] / df['total_day_minutes']
 	)
+    df['day_charge_per_minute'] = df['day_charge_per_minute'].fillna(0)
+
     df['eve_charge_per_minute'] = (
         df['total_eve_charge'] / df['total_eve_minutes']
 	)
+    df['eve_charge_per_minute'] = df['eve_charge_per_minute'].fillna(0)
+
     df['night_charge_per_minute'] = (
         df['total_night_charge'] / df['total_night_minutes']
 	)
+    df['night_charge_per_minute'] = df['night_charge_per_minute'].fillna(0)
+
     df['intl_charge_per_minute'] = (
         df['total_intl_charge'] / df['total_intl_minutes']
 	)
+    df['intl_charge_per_minute'] = df['intl_charge_per_minute'].fillna(0)
 
 	# voicemail utilization features
     df['has_vmail_usage'] = (
         df['number_vmail_messages'] > 0
 	)
     df['vmail_plan_unused '] = (
-        (df['voice_mail_plan'] == "no") &
+        (df['voice_mail_plan'] == 0) &
         (df['number_vmail_messages'] == 0)
 	)
 
