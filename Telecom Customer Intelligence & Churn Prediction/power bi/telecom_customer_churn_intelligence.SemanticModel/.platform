@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "telecom_customer_churn_intelligence"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "0f39ce8e-1403-487a-a962-d43cbffbd437"
+  }
+}

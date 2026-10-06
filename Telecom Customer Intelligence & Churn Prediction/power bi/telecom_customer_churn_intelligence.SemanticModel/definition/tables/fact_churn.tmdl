@@ -1,0 +1,216 @@
+table fact_churn
+	lineageTag: bcb0970d-2e06-4aee-b34a-3fd8f60e1ec2
+
+	column customer_key
+		dataType: int64
+		formatString: 0
+		lineageTag: f2084a14-97ab-43a8-a497-ba149c405ae0
+		summarizeBy: none
+		sourceColumn: customer_key
+
+		annotation SummarizationSetBy = User
+
+	column account_length
+		dataType: int64
+		formatString: 0
+		lineageTag: ca20e213-8dcb-457f-85a3-421f71459f35
+		summarizeBy: sum
+		sourceColumn: account_length
+
+		annotation SummarizationSetBy = Automatic
+
+	column number_vmail_messages
+		dataType: int64
+		formatString: 0
+		lineageTag: 4dbac130-7e3f-443b-9b3d-9a004d62a48a
+		summarizeBy: sum
+		sourceColumn: number_vmail_messages
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_day_minutes
+		dataType: double
+		lineageTag: 6a00e502-be60-424d-adc5-4dd6f5ba6413
+		summarizeBy: sum
+		sourceColumn: total_day_minutes
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column total_day_calls
+		dataType: int64
+		formatString: 0
+		lineageTag: a3ae5cfa-3f63-4307-9414-2d432c21e212
+		summarizeBy: sum
+		sourceColumn: total_day_calls
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_day_charge
+		dataType: double
+		lineageTag: ee120726-2aba-4218-9028-81eb1326befd
+		summarizeBy: sum
+		sourceColumn: total_day_charge
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column total_eve_minutes
+		dataType: double
+		lineageTag: 6bee3f31-85b5-4b1e-a89f-77cefac085e4
+		summarizeBy: sum
+		sourceColumn: total_eve_minutes
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column total_eve_calls
+		dataType: int64
+		formatString: 0
+		lineageTag: ab03c525-3b8c-4283-9065-cf9bd120287b
+		summarizeBy: sum
+		sourceColumn: total_eve_calls
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_eve_charge
+		dataType: double
+		lineageTag: 1856d6af-1ed2-4f39-8204-b6b23de52321
+		summarizeBy: sum
+		sourceColumn: total_eve_charge
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column total_night_minutes
+		dataType: double
+		lineageTag: 524447e4-5454-4d87-94bb-3e5017e7dda6
+		summarizeBy: sum
+		sourceColumn: total_night_minutes
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column total_night_calls
+		dataType: int64
+		formatString: 0
+		lineageTag: 91b9e0ea-ac3e-4ea9-986a-b002a3e9df43
+		summarizeBy: sum
+		sourceColumn: total_night_calls
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_night_charge
+		dataType: double
+		lineageTag: 87d75356-1d6f-427e-a5df-2838334d5565
+		summarizeBy: sum
+		sourceColumn: total_night_charge
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column total_intl_minutes
+		dataType: double
+		lineageTag: f6209ea5-7c1d-498c-b18b-12b0918b5b5c
+		summarizeBy: sum
+		sourceColumn: total_intl_minutes
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column total_intl_calls
+		dataType: int64
+		formatString: 0
+		lineageTag: 6119bdc4-32ef-46d1-ab07-958c27dde316
+		summarizeBy: sum
+		sourceColumn: total_intl_calls
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_intl_charge
+		dataType: double
+		lineageTag: 1608699b-7163-471a-9fcd-6d4413ab920d
+		summarizeBy: sum
+		sourceColumn: total_intl_charge
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column customer_service_calls
+		dataType: int64
+		formatString: 0
+		lineageTag: b3fd0695-31e4-4233-abad-3eb158ef1052
+		summarizeBy: sum
+		sourceColumn: customer_service_calls
+
+		annotation SummarizationSetBy = Automatic
+
+	column state_key
+		dataType: int64
+		formatString: 0
+		lineageTag: a58597fc-edd7-4e90-8b93-8b27f9d1003d
+		summarizeBy: none
+		sourceColumn: state_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column area_code_key
+		dataType: int64
+		formatString: 0
+		lineageTag: dec806b2-be49-4f50-9537-7e72ab385ded
+		summarizeBy: none
+		sourceColumn: area_code_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column plan_key
+		dataType: int64
+		formatString: 0
+		lineageTag: e17e3739-06a2-4acd-9280-a592e20d35d6
+		summarizeBy: none
+		sourceColumn: plan_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column churn_key
+		dataType: int64
+		formatString: 0
+		lineageTag: 2310254b-7257-4993-8043-c8a57a773481
+		summarizeBy: none
+		sourceColumn: churn_key
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fact_churn = m
+		mode: import
+		queryGroup: teleco_churn_model
+		source =
+				let
+				    Source = complete_data,
+				    #"Merged Queries" = Table.NestedJoin(Source, {"state"}, dim_state, {"state"}, "dim_state", JoinKind.LeftOuter),
+				    #"Expanded dim_state" = Table.ExpandTableColumn(#"Merged Queries", "dim_state", {"state_key"}, {"dim_state.state_key"}),
+				    #"Merged Queries1" = Table.NestedJoin(#"Expanded dim_state", {"area_code"}, dim_area_code, {"area_code"}, "dim_area_code", JoinKind.LeftOuter),
+				    #"Expanded dim_area_code" = Table.ExpandTableColumn(#"Merged Queries1", "dim_area_code", {"area_code_key"}, {"dim_area_code.area_code_key"}),
+				    #"Uppercased Text" = Table.TransformColumns(#"Expanded dim_area_code",{{"international_plan", Text.Upper, type text}, {"voice_mail_plan", Text.Upper, type text}}),
+				    #"Merged Queries3" = Table.NestedJoin(#"Uppercased Text", {"international_plan", "voice_mail_plan"}, dim_plan, {"international_plan", "voice_mail_plan"}, "dim_plan.1", JoinKind.LeftOuter),
+				    #"Expanded dim_plan.1" = Table.ExpandTableColumn(#"Merged Queries3", "dim_plan.1", {"plan_key"}, {"dim_plan.1.plan_key"}),
+				    #"Merged Queries4" = Table.NestedJoin(#"Expanded dim_plan.1", {"churn"}, dim_churn, {"churn"}, "dim_churn", JoinKind.LeftOuter),
+				    #"Expanded dim_churn" = Table.ExpandTableColumn(#"Merged Queries4", "dim_churn", {"churn_key"}, {"dim_churn.churn_key"}),
+				    #"Reordered Columns" = Table.ReorderColumns(#"Expanded dim_churn",{"customer_key", "dim_state.state_key", "dim_area_code.area_code_key", "dim_plan.1.plan_key", "dim_churn.churn_key", "state", "account_length", "area_code", "international_plan", "voice_mail_plan", "number_vmail_messages", "total_day_minutes", "total_day_calls", "total_day_charge", "total_eve_minutes", "total_eve_calls", "total_eve_charge", "total_night_minutes", "total_night_calls", "total_night_charge", "total_intl_minutes", "total_intl_calls", "total_intl_charge", "customer_service_calls", "churn"}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Reordered Columns",{"state", "area_code", "international_plan", "voice_mail_plan", "churn"}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Removed Columns",{{"dim_state.state_key", "state_key"}, {"dim_area_code.area_code_key", "area_code_key"}, {"dim_plan.1.plan_key", "plan_key"}, {"dim_churn.churn_key", "churn_key"}})
+				in
+				    #"Renamed Columns"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

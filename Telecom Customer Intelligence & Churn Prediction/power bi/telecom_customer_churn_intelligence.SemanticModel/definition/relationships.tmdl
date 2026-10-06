@@ -1,0 +1,16 @@
+relationship AutoDetected_fb9663e8-e982-454d-b39f-f0cf6db6c917
+	fromColumn: fact_churn.state_key
+	toColumn: dim_state.state_key
+
+relationship AutoDetected_c6fcf367-417f-4c6e-b229-df17eda57cb8
+	fromColumn: fact_churn.area_code_key
+	toColumn: dim_area_code.area_code_key
+
+relationship AutoDetected_9e5c478a-00b0-4caf-83a4-d59bc47df8a2
+	fromColumn: fact_churn.plan_key
+	toColumn: dim_plan.plan_key
+
+relationship AutoDetected_d0634ee8-e5e7-4db2-a7c2-fe3479b5fe14
+	fromColumn: fact_churn.churn_key
+	toColumn: dim_churn.churn_key
+

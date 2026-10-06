@@ -1,0 +1,39 @@
+table dim_churn
+	lineageTag: e57fed50-09fb-4fb9-adc5-28b838738da0
+
+	column churn_key
+		dataType: int64
+		formatString: 0
+		lineageTag: 46531dea-7073-4fd9-a079-8b1eabca2878
+		summarizeBy: none
+		sourceColumn: churn_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column churn
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 08b9c597-3a30-422f-80f5-aa8391bb2379
+		summarizeBy: none
+		sourceColumn: churn
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_churn = m
+		mode: import
+		queryGroup: teleco_churn_model
+		source =
+				let
+				    Source = complete_data,
+				    #"Removed Columns" = Table.RemoveColumns(Source,{"state", "account_length", "area_code", "international_plan", "voice_mail_plan", "number_vmail_messages", "total_day_minutes", "total_day_calls", "total_day_charge", "total_eve_minutes", "total_eve_calls", "total_eve_charge", "total_night_minutes", "total_night_calls", "total_night_charge", "total_intl_minutes", "total_intl_calls", "total_intl_charge", "customer_service_calls", "customer_key"}),
+				    #"Removed Duplicates" = Table.Distinct(#"Removed Columns"),
+				    #"Added Index" = Table.AddIndexColumn(#"Removed Duplicates", "Index", 1, 1, Int64.Type),
+				    #"Reordered Columns" = Table.ReorderColumns(#"Added Index",{"Index", "churn"}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Reordered Columns",{{"Index", "churn_key"}})
+				in
+				    #"Renamed Columns"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
