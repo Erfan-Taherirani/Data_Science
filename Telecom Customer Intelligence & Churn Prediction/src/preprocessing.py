@@ -222,3 +222,21 @@ def get_df_engineered(df: pd.DataFrame) -> pd.DataFrame:
 	)
 
     return df
+
+
+def save_complete_data(
+    file_path: str = "../data/processed/complete_data.csv"
+) -> str:
+    """This function saves the complete data as a csv file.
+
+    :param file_path: The path where the data will be saved.
+    :return: A string indicating the success of the operation.
+    """
+    # Reading the data
+    df_train = pd.read_csv("../data/processed/df_processed.csv")
+    df_test = pd.read_csv("../data/processed/df_test_processed.csv")
+
+    df = pd.concat([df_train, df_test]) # Concatenating the two dataframes
+    df.to_csv(file_path, index=False) # Saving the dataframe
+
+    return "Data saved successfully"
