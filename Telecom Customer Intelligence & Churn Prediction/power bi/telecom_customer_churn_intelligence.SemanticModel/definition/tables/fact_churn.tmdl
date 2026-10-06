@@ -171,21 +171,30 @@ table fact_churn
 
 		annotation SummarizationSetBy = Automatic
 
-	column plan_key
+	column intl_plan_key
 		dataType: int64
 		formatString: 0
-		lineageTag: e17e3739-06a2-4acd-9280-a592e20d35d6
+		lineageTag: 97544dd8-4194-4a82-88cd-9b76cb2a0123
 		summarizeBy: none
-		sourceColumn: plan_key
+		sourceColumn: intl_plan_key
 
 		annotation SummarizationSetBy = Automatic
 
-	column churn_key
+	column vmail_plan_key
 		dataType: int64
 		formatString: 0
-		lineageTag: 2310254b-7257-4993-8043-c8a57a773481
+		lineageTag: 6ea09054-234a-4fe9-9d00-7a137265c730
 		summarizeBy: none
-		sourceColumn: churn_key
+		sourceColumn: vmail_plan_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column churn
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 8be00d8b-8755-410f-9fe1-f638599cce12
+		summarizeBy: none
+		sourceColumn: churn
 
 		annotation SummarizationSetBy = Automatic
 
@@ -194,19 +203,19 @@ table fact_churn
 		queryGroup: teleco_churn_model
 		source =
 				let
-				    Source = complete_data,
+				    Source = #"complete_data (2)",
 				    #"Merged Queries" = Table.NestedJoin(Source, {"state"}, dim_state, {"state"}, "dim_state", JoinKind.LeftOuter),
 				    #"Expanded dim_state" = Table.ExpandTableColumn(#"Merged Queries", "dim_state", {"state_key"}, {"dim_state.state_key"}),
 				    #"Merged Queries1" = Table.NestedJoin(#"Expanded dim_state", {"area_code"}, dim_area_code, {"area_code"}, "dim_area_code", JoinKind.LeftOuter),
 				    #"Expanded dim_area_code" = Table.ExpandTableColumn(#"Merged Queries1", "dim_area_code", {"area_code_key"}, {"dim_area_code.area_code_key"}),
 				    #"Uppercased Text" = Table.TransformColumns(#"Expanded dim_area_code",{{"international_plan", Text.Upper, type text}, {"voice_mail_plan", Text.Upper, type text}}),
-				    #"Merged Queries3" = Table.NestedJoin(#"Uppercased Text", {"international_plan", "voice_mail_plan"}, dim_plan, {"international_plan", "voice_mail_plan"}, "dim_plan.1", JoinKind.LeftOuter),
-				    #"Expanded dim_plan.1" = Table.ExpandTableColumn(#"Merged Queries3", "dim_plan.1", {"plan_key"}, {"dim_plan.1.plan_key"}),
-				    #"Merged Queries4" = Table.NestedJoin(#"Expanded dim_plan.1", {"churn"}, dim_churn, {"churn"}, "dim_churn", JoinKind.LeftOuter),
-				    #"Expanded dim_churn" = Table.ExpandTableColumn(#"Merged Queries4", "dim_churn", {"churn_key"}, {"dim_churn.churn_key"}),
-				    #"Reordered Columns" = Table.ReorderColumns(#"Expanded dim_churn",{"customer_key", "dim_state.state_key", "dim_area_code.area_code_key", "dim_plan.1.plan_key", "dim_churn.churn_key", "state", "account_length", "area_code", "international_plan", "voice_mail_plan", "number_vmail_messages", "total_day_minutes", "total_day_calls", "total_day_charge", "total_eve_minutes", "total_eve_calls", "total_eve_charge", "total_night_minutes", "total_night_calls", "total_night_charge", "total_intl_minutes", "total_intl_calls", "total_intl_charge", "customer_service_calls", "churn"}),
-				    #"Removed Columns" = Table.RemoveColumns(#"Reordered Columns",{"state", "area_code", "international_plan", "voice_mail_plan", "churn"}),
-				    #"Renamed Columns" = Table.RenameColumns(#"Removed Columns",{{"dim_state.state_key", "state_key"}, {"dim_area_code.area_code_key", "area_code_key"}, {"dim_plan.1.plan_key", "plan_key"}, {"dim_churn.churn_key", "churn_key"}})
+				    #"Merged Queries3" = Table.NestedJoin(#"Uppercased Text", {"international_plan"}, dim_intl_plan, {"international_plan"}, "dim_plan.1", JoinKind.LeftOuter),
+				    #"Expanded dim_plan.1" = Table.ExpandTableColumn(#"Merged Queries3", "dim_plan.1", {"intl_plan_key"}, {"dim_plan.1.intl_plan_key"}),
+				    #"Merged Queries2" = Table.NestedJoin(#"Expanded dim_plan.1", {"voice_mail_plan"}, dim_vmail_plan, {"voice_mail_plan"}, "dim_vmail_plan", JoinKind.LeftOuter),
+				    #"Expanded dim_vmail_plan" = Table.ExpandTableColumn(#"Merged Queries2", "dim_vmail_plan", {"vmail_plan_key"}, {"dim_vmail_plan.vmail_plan_key"}),
+				    #"Reordered Columns" = Table.ReorderColumns(#"Expanded dim_vmail_plan",{"customer_key", "dim_state.state_key", "dim_area_code.area_code_key", "dim_plan.1.intl_plan_key", "dim_vmail_plan.vmail_plan_key", "state", "account_length", "area_code", "international_plan", "voice_mail_plan", "number_vmail_messages", "total_day_minutes", "total_day_calls", "total_day_charge", "total_eve_minutes", "total_eve_calls", "total_eve_charge", "total_night_minutes", "total_night_calls", "total_night_charge", "total_intl_minutes", "total_intl_calls", "total_intl_charge", "customer_service_calls", "churn"}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Reordered Columns",{"state", "area_code", "international_plan", "voice_mail_plan"}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Removed Columns",{{"dim_state.state_key", "state_key"}, {"dim_area_code.area_code_key", "area_code_key"}, {"dim_plan.1.intl_plan_key", "intl_plan_key"}, {"dim_vmail_plan.vmail_plan_key", "vmail_plan_key"}})
 				in
 				    #"Renamed Columns"
 

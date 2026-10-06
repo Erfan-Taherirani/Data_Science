@@ -5,6 +5,29 @@ table measure
 		formatString: 0
 		lineageTag: 461688f8-9e3c-45e2-b282-1ada7ca15d5c
 
+	measure 'Churned Customers' =
+			
+			CALCULATE(
+			    COUNTROWS('fact_churn'),
+			    'fact_churn'[churn] = TRUE()
+			)
+		formatString: 0
+		lineageTag: 4432ebb8-24b5-4e4d-8630-7cf83918ad02
+
+	measure 'Churn Rate' =
+			
+			DIVIDE(
+			    CALCULATE(
+			        COUNTROWS(fact_churn),
+			        fact_churn[churn] = TRUE()
+			    ),
+			    COUNTROWS(fact_churn),
+			    0
+			)
+		lineageTag: fac9129a-a240-45a4-b0d2-26f8fab64c38
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column Column1
 		dataType: string
 		lineageTag: 126e5bf2-c517-4398-9c4f-e96a93c7aef5

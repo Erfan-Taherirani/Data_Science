@@ -1,13 +1,24 @@
-expression complete_data =
+expression 'complete_data (2)' =
 		let
 		    Source = Csv.Document(File.Contents("D:\Data Career\Repos\Data_Science\Telecom Customer Intelligence & Churn Prediction\data\processed\complete_data.csv"),[Delimiter=",", Columns=21, Encoding=1252, QuoteStyle=QuoteStyle.None]),
 		    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
 		    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"state", type text}, {"account_length", Int64.Type}, {"area_code", Int64.Type}, {"international_plan", type text}, {"voice_mail_plan", type text}, {"number_vmail_messages", Int64.Type}, {"total_day_minutes", type number}, {"total_day_calls", Int64.Type}, {"total_day_charge", type number}, {"total_eve_minutes", type number}, {"total_eve_calls", Int64.Type}, {"total_eve_charge", type number}, {"total_night_minutes", type number}, {"total_night_calls", Int64.Type}, {"total_night_charge", type number}, {"total_intl_minutes", type number}, {"total_intl_calls", Int64.Type}, {"total_intl_charge", type number}, {"customer_service_calls", Int64.Type}, {"churn", type logical}, {"customer_key", Int64.Type}})
 		in
 		    #"Changed Type"
-	lineageTag: 33713a45-834f-4c86-9864-5376888f372b
+	lineageTag: af147b34-b350-4aae-96c7-e8980f3e02c2
 
 	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression bst_model_high_feature_importance =
+		let
+		    Source = Csv.Document(File.Contents("D:\Data Career\Repos\Data_Science\Telecom Customer Intelligence & Churn Prediction\data\processed\bst_model_high_feature_importance.csv"),[Delimiter=",", Columns=3, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+		    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+		    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"", Int64.Type}, {"features", type text}, {"importance", type number}})
+		in
+		    #"Changed Type"
+	lineageTag: aa6f4b2a-782e-48f8-92e0-c1855a62d0b1
 
 	annotation PBI_ResultType = Table
 

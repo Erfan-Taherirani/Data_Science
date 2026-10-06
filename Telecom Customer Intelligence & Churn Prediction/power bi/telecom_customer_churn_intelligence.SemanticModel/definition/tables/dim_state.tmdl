@@ -23,7 +23,7 @@ table dim_state
 		queryGroup: teleco_churn_model
 		source =
 				let
-				    Source = complete_data,
+				    Source = #"complete_data (2)",
 				    #"Removed Columns" = Table.RemoveColumns(Source,{"account_length", "area_code", "international_plan", "voice_mail_plan", "number_vmail_messages", "total_day_minutes", "total_day_calls", "total_day_charge", "total_eve_minutes", "total_eve_calls", "total_eve_charge", "total_night_minutes", "total_night_calls", "total_night_charge", "total_intl_minutes", "total_intl_calls", "total_intl_charge", "customer_service_calls", "churn", "customer_key"}),
 				    #"Removed Duplicates" = Table.Distinct(#"Removed Columns"),
 				    #"Added Index" = Table.AddIndexColumn(#"Removed Duplicates", "Index", 1, 1, Int64.Type),

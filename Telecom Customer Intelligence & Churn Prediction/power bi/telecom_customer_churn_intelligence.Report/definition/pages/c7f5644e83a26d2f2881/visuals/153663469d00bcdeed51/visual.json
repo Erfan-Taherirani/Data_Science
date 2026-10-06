@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
   "name": "153663469d00bcdeed51",
   "position": {
-    "x": 0,
+    "x": 23.4492451595706,
     "y": 0,
     "z": 1000,
-    "height": 53.333333333333336,
-    "width": 763.33333333333337,
+    "height": 150.74514745438245,
+    "width": 740.32616860930045,
     "tabOrder": 1000
   },
   "visual": {
@@ -16,6 +16,28 @@
         {
           "properties": {
             "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ],
+                "horizontalTextAlignment": "center"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
               {
                 "textRuns": [
                   {

@@ -6,11 +6,11 @@ relationship AutoDetected_c6fcf367-417f-4c6e-b229-df17eda57cb8
 	fromColumn: fact_churn.area_code_key
 	toColumn: dim_area_code.area_code_key
 
-relationship AutoDetected_9e5c478a-00b0-4caf-83a4-d59bc47df8a2
-	fromColumn: fact_churn.plan_key
-	toColumn: dim_plan.plan_key
+relationship AutoDetected_a1d66406-02b7-47d9-acb5-351f236f316c
+	fromColumn: fact_churn.intl_plan_key
+	toColumn: dim_intl_plan.intl_plan_key
 
-relationship AutoDetected_d0634ee8-e5e7-4db2-a7c2-fe3479b5fe14
-	fromColumn: fact_churn.churn_key
-	toColumn: dim_churn.churn_key
+relationship AutoDetected_bd510659-f4ab-4105-af13-6609cbce59e0
+	fromColumn: fact_churn.vmail_plan_key
+	toColumn: dim_vmail_plan.vmail_plan_key
 

@@ -233,10 +233,8 @@ def save_complete_data(
     :return: A string indicating the success of the operation.
     """
     # Reading the data
-    df_train = load_data("../data/raw/churn-bigml-80.csv")
-    df_test = load_data("../data/raw/churn-bigml-20.csv")
+    df = load_data("../data/raw/churn-bigml-80.csv")
 
-    df = pd.concat([df_train, df_test]) # Concatenating the two dataframes
     df['customer_key'] = [key for key in range(1, len(df)+1)] # Creating a new column with customer keys
 
     df.to_csv(file_path, index=False) # Saving the dataframe

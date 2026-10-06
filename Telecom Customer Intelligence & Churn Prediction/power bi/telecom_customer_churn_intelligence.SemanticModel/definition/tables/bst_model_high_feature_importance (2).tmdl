@@ -1,0 +1,35 @@
+table 'bst_model_high_feature_importance (2)'
+	lineageTag: 60035b65-e2e9-4ecc-a60c-6167d08bf130
+
+	column features
+		dataType: string
+		lineageTag: 71ed5e12-0cd2-4089-a186-8b269d863938
+		summarizeBy: none
+		sourceColumn: features
+
+		annotation SummarizationSetBy = Automatic
+
+	column importance
+		dataType: double
+		lineageTag: 7e6f3168-b29b-42f9-b8b4-98c0db172927
+		summarizeBy: none
+		sourceColumn: importance
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 'bst_model_high_feature_importance (2)' = m
+		mode: import
+		queryGroup: teleco_churn_model
+		source =
+				let
+				    Source = bst_model_high_feature_importance,
+				    #"Removed Columns" = Table.RemoveColumns(Source,{""})
+				in
+				    #"Removed Columns"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

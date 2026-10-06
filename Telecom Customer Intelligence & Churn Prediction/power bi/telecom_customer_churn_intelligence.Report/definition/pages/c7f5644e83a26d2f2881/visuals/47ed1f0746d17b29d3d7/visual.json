@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
   "name": "47ed1f0746d17b29d3d7",
   "position": {
-    "x": 0,
-    "y": 53.333333333333336,
+    "x": 763.68101135347354,
+    "y": 0,
     "z": 0,
-    "height": 150,
-    "width": 280,
+    "height": 150.00042582788035,
+    "width": 280.81475067777603,
     "tabOrder": 0
   },
   "visual": {
@@ -27,7 +27,8 @@
                 }
               },
               "queryRef": "measure.Total Customers",
-              "nativeQueryRef": "Total Customers"
+              "nativeQueryRef": "Total Customers",
+              "format": "0.00"
             }
           ]
         }

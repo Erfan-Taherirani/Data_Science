@@ -13,16 +13,17 @@ queryGroup teleco_churn_model
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-annotation PBI_QueryOrder = ["complete_data","fact_churn","dim_state","dim_area_code","dim_plan","dim_churn","measure"]
+annotation PBI_QueryOrder = ["fact_churn","dim_state","dim_area_code","dim_intl_plan","dim_vmail_plan","measure","bst_model_high_feature_importance (2)","complete_data (2)","bst_model_high_feature_importance"]
 
 annotation PBI_ProTooling = ["DevMode"]
 
 ref table fact_churn
 ref table dim_state
 ref table dim_area_code
-ref table dim_plan
-ref table dim_churn
+ref table dim_intl_plan
 ref table measure
+ref table dim_vmail_plan
+ref table 'bst_model_high_feature_importance (2)'
 
 ref cultureInfo en-US
 

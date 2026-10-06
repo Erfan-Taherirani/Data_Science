@@ -1,0 +1,39 @@
+table dim_vmail_plan
+	lineageTag: 28c471bb-ddf9-4e7f-baba-4e403c7aa49f
+
+	column vmail_plan_key
+		dataType: int64
+		formatString: 0
+		lineageTag: 27a030dd-beef-454f-ac1d-46afd3edc527
+		summarizeBy: none
+		sourceColumn: vmail_plan_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column voice_mail_plan
+		dataType: string
+		lineageTag: feb53d72-1476-458a-a6d8-53c8f956c89f
+		summarizeBy: none
+		sourceColumn: voice_mail_plan
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_vmail_plan = m
+		mode: import
+		queryGroup: teleco_churn_model
+		source =
+				let
+				    Source = #"complete_data (2)",
+				    #"Removed Columns" = Table.RemoveColumns(Source,{"state", "account_length", "area_code", "international_plan", "number_vmail_messages", "total_day_minutes", "total_day_calls", "total_day_charge", "total_eve_minutes", "total_eve_calls", "total_eve_charge", "total_night_minutes", "total_night_calls", "total_night_charge", "total_intl_minutes", "total_intl_calls", "total_intl_charge", "customer_service_calls", "churn", "customer_key"}),
+				    #"Removed Duplicates" = Table.Distinct(#"Removed Columns"),
+				    #"Uppercased Text" = Table.TransformColumns(#"Removed Duplicates",{{"voice_mail_plan", Text.Upper, type text}}),
+				    #"Added Index" = Table.AddIndexColumn(#"Uppercased Text", "Index", 1, 1, Int64.Type),
+				    #"Reordered Columns" = Table.ReorderColumns(#"Added Index",{"Index", "voice_mail_plan"}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Reordered Columns",{{"Index", "vmail_plan_key"}})
+				in
+				    #"Renamed Columns"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

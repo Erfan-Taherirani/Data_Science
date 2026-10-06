@@ -1,3 +1,9 @@
+"""
+This module contains the functions for training the optimal xgboost model.
+
+functions:
+    train_model: Trains the optimal xgboost model on the train data.
+"""
 import pandas as pd
 import numpy as np
 from sklearn.model_selection import StratifiedKFold
