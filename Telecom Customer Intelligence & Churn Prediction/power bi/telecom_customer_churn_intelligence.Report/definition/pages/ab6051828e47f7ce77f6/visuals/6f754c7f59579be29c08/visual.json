@@ -1,16 +1,16 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
-  "name": "4072f8e4b615f9b90af1",
+  "name": "6f754c7f59579be29c08",
   "position": {
-    "x": 23.4492451595706,
-    "y": 167.49460828264716,
-    "z": 4000,
-    "height": 452.23544236314734,
-    "width": 606.33048198318272,
-    "tabOrder": 4000
+    "x": 22.674482973981917,
+    "y": 163.95395381186924,
+    "z": 10000,
+    "height": 451.7454684816397,
+    "width": 966.28181289122927,
+    "tabOrder": 10000
   },
   "visual": {
-    "visualType": "clusteredBarChart",
+    "visualType": "lineClusteredColumnComboChart",
     "query": {
       "queryState": {
         "Category": {
@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "dim_state"
+                      "Entity": "fact_churn"
                     }
                   },
-                  "Property": "state"
+                  "Property": "customer_service_calls"
                 }
               },
-              "queryRef": "dim_state.state",
-              "nativeQueryRef": "state",
+              "queryRef": "fact_churn.customer_service_calls",
+              "nativeQueryRef": "customer_service_calls",
               "active": true
             }
           ]
@@ -47,7 +47,26 @@
               },
               "queryRef": "measure.Churn Rate",
               "nativeQueryRef": "Churn Rate",
-              "format": "0.0%;-0.0%;0.0%"
+              "format": "0.00%;-0.00%;0.00%"
+            }
+          ]
+        },
+        "Y2": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "measure"
+                    }
+                  },
+                  "Property": "Churn Rate"
+                }
+              },
+              "queryRef": "measure.Churn Rate",
+              "nativeQueryRef": "Churn Rate",
+              "format": "0.00%;-0.00%;0.00%"
             }
           ]
         }
@@ -75,98 +94,10 @@
       "categoryAxis": [
         {
           "properties": {
-            "fontSize": {
+            "axisType": {
               "expr": {
                 "Literal": {
-                  "Value": "13D"
-                }
-              }
-            },
-            "bold": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "labelColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 1,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            },
-            "maxMarginFactor": {
-              "expr": {
-                "Literal": {
-                  "Value": "50L"
-                }
-              }
-            },
-            "switchAxisPosition": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "concatenateLabels": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "showAxisTitle": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "preferredCategoryWidth": {
-              "expr": {
-                "Literal": {
-                  "Value": "30D"
-                }
-              }
-            },
-            "innerPadding": {
-              "expr": {
-                "Literal": {
-                  "Value": "30L"
-                }
-              }
-            },
-            "outerPadding": {
-              "expr": {
-                "Literal": {
-                  "Value": "0L"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "valueAxis": [
-        {
-          "properties": {
-            "roundRange": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "logAxisScale": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
+                  "Value": "'Scalar'"
                 }
               }
             },
@@ -177,6 +108,13 @@
                 }
               }
             },
+            "roundRange": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
             "show": {
               "expr": {
                 "Literal": {
@@ -184,10 +122,31 @@
                 }
               }
             },
+            "concatenateLabels": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
             "fontSize": {
               "expr": {
                 "Literal": {
                   "Value": "12D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'"
                 }
               }
             },
@@ -203,6 +162,26 @@
                 }
               }
             },
+            "gridlineShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "valueAxis": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
             "bold": {
               "expr": {
                 "Literal": {
@@ -210,14 +189,19 @@
                 }
               }
             },
-            "labelPrecision": {
-              "expr": {
-                "Literal": {
-                  "Value": "0L"
+            "labelColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
                 }
               }
             },
-            "gridlineShow": {
+            "secShow": {
               "expr": {
                 "Literal": {
                   "Value": "false"
@@ -230,7 +214,7 @@
                   "expr": {
                     "ThemeDataColor": {
                       "ColorId": 0,
-                      "Percent": -0.1
+                      "Percent": -0.2
                     }
                   }
                 }
@@ -242,11 +226,18 @@
                   "Value": "'dashed'"
                 }
               }
+            },
+            "gridlineAutoScale": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
             }
           }
         }
       ],
-      "zoom": [
+      "legend": [
         {
           "properties": {
             "show": {
@@ -266,48 +257,6 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 3,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "data": [
-              {
-                "scopeId": {
-                  "Comparison": {
-                    "ComparisonKind": 0,
-                    "Left": {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Entity": "dim_state"
-                          }
-                        },
-                        "Property": "state"
-                      }
-                    },
-                    "Right": {
-                      "Literal": {
-                        "Value": "'TX'"
-                      }
-                    }
-                  }
-                }
-              }
-            ]
-          }
-        },
-        {
-          "properties": {
-            "fill": {
-              "solid": {
-                "color": {
-                  "expr": {
                     "FillRule": {
                       "Input": {
                         "Measure": {
@@ -320,25 +269,18 @@
                         }
                       },
                       "FillRule": {
-                        "linearGradient3": {
+                        "linearGradient2": {
                           "min": {
                             "color": {
                               "Literal": {
-                                "Value": "'#FFFFFF'"
-                              }
-                            }
-                          },
-                          "mid": {
-                            "color": {
-                              "Literal": {
-                                "Value": "'midColor'"
+                                "Value": "'#a38600'"
                               }
                             }
                           },
                           "max": {
                             "color": {
                               "Literal": {
-                                "Value": "'#0d6abf'"
+                                "Value": "'#09124f'"
                               }
                             }
                           },
@@ -369,21 +311,18 @@
         },
         {
           "properties": {
-            "fillTransparency": {
-              "expr": {
-                "Literal": {
-                  "Value": "10D"
-                }
-              }
-            },
             "borderShow": {
               "expr": {
                 "Literal": {
                   "Value": "false"
                 }
               }
-            },
-            "borderColor": {
+            }
+          }
+        },
+        {
+          "properties": {
+            "fill": {
               "solid": {
                 "color": {
                   "expr": {
@@ -392,6 +331,43 @@
                       "Percent": 0
                     }
                   }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "measure.Churn Rate"
+          }
+        }
+      ],
+      "lineStyles": [
+        {
+          "properties": {
+            "strokeWidth": {
+              "expr": {
+                "Literal": {
+                  "Value": "2D"
+                }
+              }
+            },
+            "lineChartType": {
+              "expr": {
+                "Literal": {
+                  "Value": "'linear'"
+                }
+              }
+            },
+            "showMarker": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "markerSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "4D"
                 }
               }
             }
@@ -408,38 +384,31 @@
                 }
               }
             },
+            "labelOrientation": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            },
             "labelPosition": {
               "expr": {
                 "Literal": {
-                  "Value": "'Auto'"
+                  "Value": "'Above'"
                 }
               }
             },
-            "labelOverflow": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "bold": {
               "expr": {
                 "Literal": {
                   "Value": "true"
-                }
-              }
-            },
-            "optimizeLabelDisplay": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "labelContainerMaxWidth": {
-              "expr": {
-                "Literal": {
-                  "Value": "200D"
-                }
-              }
-            },
-            "enableTitleDataLabel": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
                 }
               }
             },
@@ -455,92 +424,38 @@
                 }
               }
             },
-            "bold": {
+            "labelPrecision": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "1L"
                 }
               }
             },
-            "fontSize": {
+            "labelDensity": {
               "expr": {
                 "Literal": {
-                  "Value": "12D"
-                }
-              }
-            },
-            "enableDetailDataLabel": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "enableBackground": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "backgroundColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            },
-            "labelContentLayout": {
-              "expr": {
-                "Literal": {
-                  "Value": "'SingleLine'"
-                }
-              }
-            },
-            "horizontalAlignment": {
-              "expr": {
-                "Literal": {
-                  "Value": "'left'"
+                  "Value": "50L"
                 }
               }
             }
           }
-        }
-      ],
-      "general": [
+        },
         {
           "properties": {
-            "responsive": {
+            "showSeries": {
               "expr": {
                 "Literal": {
                   "Value": "true"
                 }
               }
             }
-          }
-        }
-      ]
-    },
-    "visualContainerObjects": {
-      "stylePreset": [
-        {
-          "properties": {
-            "name": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Data labels'"
-                }
-              }
-            }
+          },
+          "selector": {
+            "metadata": "measure.Churn Rate"
           }
         }
       ],
-      "lockAspect": [
+      "seriesLabels": [
         {
           "properties": {
             "show": {
@@ -552,27 +467,16 @@
             }
           }
         }
-      ],
-      "general": [
-        {
-          "properties": {
-            "keepLayerOrder": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
+      ]
+    },
+    "visualContainerObjects": {
       "title": [
         {
           "properties": {
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Churn Rate by State'"
+                  "Value": "'Churn Rate by Customer Service Calls'"
                 }
               }
             },
@@ -583,20 +487,6 @@
                 }
               }
             },
-            "underline": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "bold": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
             "fontSize": {
               "expr": {
                 "Literal": {
@@ -604,17 +494,10 @@
                 }
               }
             },
-            "alignment": {
+            "bold": {
               "expr": {
                 "Literal": {
-                  "Value": "'left'"
-                }
-              }
-            },
-            "titleWrap": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             }
@@ -641,44 +524,6 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "background": [
-        {
-          "properties": {
-            "color": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      ],
-      "dropShadow": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "position": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Outer'"
                 }
               }
             }

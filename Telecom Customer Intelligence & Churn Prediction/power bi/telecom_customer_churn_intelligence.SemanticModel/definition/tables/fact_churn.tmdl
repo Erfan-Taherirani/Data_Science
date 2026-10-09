@@ -148,10 +148,10 @@ table fact_churn
 		dataType: int64
 		formatString: 0
 		lineageTag: b3fd0695-31e4-4233-abad-3eb158ef1052
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: customer_service_calls
 
-		annotation SummarizationSetBy = Automatic
+		annotation SummarizationSetBy = User
 
 	column state_key
 		dataType: int64

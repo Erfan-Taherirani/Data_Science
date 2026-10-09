@@ -1,12 +1,12 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
-  "name": "153663469d00bcdeed51",
+  "name": "78a9a8d4df54cf066712",
   "position": {
-    "x": 23.4492451595706,
+    "x": 22.674482973981917,
     "y": 0,
     "z": 1000,
-    "height": 150.74514745438245,
-    "width": 740.32616860930045,
+    "height": 150.00042582788035,
+    "width": 966.28181289122927,
     "tabOrder": 1000
   },
   "visual": {
@@ -44,7 +44,7 @@
                     "value": "Telecom Customer Churn - Executive Overview",
                     "textStyle": {
                       "fontFamily": "Segoe (Bold)",
-                      "fontSize": "24pt"
+                      "fontSize": "32pt"
                     }
                   }
                 ],

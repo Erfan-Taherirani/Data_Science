@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
-  "name": "f96971025ca7300d1a9f",
+  "name": "e17a41c6a34c13431d0e",
   "position": {
     "x": 23.4492451595706,
     "y": 636.47951147405922,
-    "z": 6001,
+    "z": 6000,
     "height": 425.43630503792377,
-    "width": 564.4568299125209,
-    "tabOrder": 6001
+    "width": 554.40715341556211,
+    "tabOrder": 6000
   },
   "visual": {
     "visualType": "clusteredColumnChart",
@@ -183,7 +183,7 @@
                   "expr": {
                     "ThemeDataColor": {
                       "ColorId": 0,
-                      "Percent": -0.1
+                      "Percent": -0.2
                     }
                   }
                 }
@@ -214,8 +214,8 @@
                 "color": {
                   "expr": {
                     "ThemeDataColor": {
-                      "ColorId": 4,
-                      "Percent": 0
+                      "ColorId": 3,
+                      "Percent": -0.5
                     }
                   }
                 }
@@ -256,7 +256,7 @@
                 "color": {
                   "expr": {
                     "ThemeDataColor": {
-                      "ColorId": 2,
+                      "ColorId": 8,
                       "Percent": -0.25
                     }
                   }
@@ -338,7 +338,7 @@
             "enableValueDataLabel": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },
@@ -359,7 +359,7 @@
             "labelPosition": {
               "expr": {
                 "Literal": {
-                  "Value": "'Auto'"
+                  "Value": "'InsideCenter'"
                 }
               }
             },
@@ -387,7 +387,21 @@
             "enableBackground": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
+                }
+              }
+            },
+            "labelOverflow": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "backgroundTransparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "20D"
                 }
               }
             }
@@ -442,7 +456,7 @@
                 "color": {
                   "expr": {
                     "ThemeDataColor": {
-                      "ColorId": 1,
+                      "ColorId": 0,
                       "Percent": 0
                     }
                   }
@@ -459,14 +473,14 @@
             "markerSize": {
               "expr": {
                 "Literal": {
-                  "Value": "7D"
+                  "Value": "5D"
                 }
               }
             },
             "labelShow": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
@@ -480,14 +494,14 @@
             "labelFormat": {
               "expr": {
                 "Literal": {
-                  "Value": "'absolute'"
+                  "Value": "'relativeNumeric'"
                 }
               }
             },
             "labelBackground": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },
@@ -495,6 +509,46 @@
               "expr": {
                 "Literal": {
                   "Value": "12D"
+                }
+              }
+            },
+            "tooltipShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "tooltipFormat": {
+              "expr": {
+                "Literal": {
+                  "Value": "'absolute'"
+                }
+              }
+            },
+            "labelBackgroundColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "labelBackgroundTransparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "50D"
+                }
+              }
+            },
+            "markerShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }

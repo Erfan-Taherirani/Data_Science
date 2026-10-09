@@ -1,16 +1,16 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
-  "name": "8d8ed2b083bddf3fac39",
+  "name": "7350f377fba127844785",
   "position": {
-    "x": 649.879080136671,
-    "y": 167.49460828264716,
+    "x": 596.28080548622393,
+    "y": 636.47951147405922,
     "z": 5000,
-    "height": 452.23544236314734,
-    "width": 758.75057552039164,
+    "height": 425.43630503792377,
+    "width": 549.38231516708265,
     "tabOrder": 5000
   },
   "visual": {
-    "visualType": "lineStackedColumnComboChart",
+    "visualType": "clusteredColumnChart",
     "query": {
       "queryState": {
         "Category": {
@@ -20,16 +20,15 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "fact_churn"
+                      "Entity": "dim_intl_plan"
                     }
                   },
-                  "Property": "customer_service_calls"
+                  "Property": "international_plan"
                 }
               },
-              "queryRef": "fact_churn.customer_service_calls",
-              "nativeQueryRef": "customer_service_calls",
-              "active": true,
-              "format": "0"
+              "queryRef": "dim_intl_plan.international_plan",
+              "nativeQueryRef": "international_plan",
+              "active": true
             }
           ]
         },
@@ -76,10 +75,10 @@
       "categoryAxis": [
         {
           "properties": {
-            "axisType": {
+            "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "'Scalar'"
+                  "Value": "12D"
                 }
               }
             },
@@ -90,47 +89,18 @@
                 }
               }
             },
-            "concatenateLabels": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
             "labelColor": {
               "solid": {
                 "color": {
                   "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 1,
-                      "Percent": 0
+                    "Literal": {
+                      "Value": "'#242424'"
                     }
                   }
                 }
               }
             },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "12D"
-                }
-              }
-            },
             "showAxisTitle": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "initialScrollPosition": {
-              "expr": {
-                "Literal": {
-                  "Value": "'start'"
-                }
-              }
-            },
-            "gridlineShow": {
               "expr": {
                 "Literal": {
                   "Value": "false"
@@ -143,13 +113,6 @@
       "valueAxis": [
         {
           "properties": {
-            "start": {
-              "expr": {
-                "Literal": {
-                  "Value": "0D"
-                }
-              }
-            },
             "show": {
               "expr": {
                 "Literal": {
@@ -175,25 +138,10 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 1,
-                      "Percent": 0
+                    "Literal": {
+                      "Value": "'#242424'"
                     }
                   }
-                }
-              }
-            },
-            "switchAxisPosition": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "showAxisTitle": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
                 }
               }
             },
@@ -233,19 +181,6 @@
           }
         }
       ],
-      "zoom": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
       "dataPoint": [
         {
           "properties": {
@@ -255,7 +190,7 @@
                   "expr": {
                     "ThemeDataColor": {
                       "ColorId": 3,
-                      "Percent": 0
+                      "Percent": -0.5
                     }
                   }
                 }
@@ -272,15 +207,15 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Entity": "fact_churn"
+                            "Entity": "dim_intl_plan"
                           }
                         },
-                        "Property": "customer_service_calls"
+                        "Property": "international_plan"
                       }
                     },
                     "Right": {
                       "Literal": {
-                        "Value": "4L"
+                        "Value": "'YES'"
                       }
                     }
                   }
@@ -295,64 +230,11 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "FillRule": {
-                      "Input": {
-                        "Measure": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Entity": "measure"
-                            }
-                          },
-                          "Property": "Churn Rate"
-                        }
-                      },
-                      "FillRule": {
-                        "linearGradient2": {
-                          "min": {
-                            "color": {
-                              "Literal": {
-                                "Value": "'#a0d1ff'"
-                              }
-                            }
-                          },
-                          "max": {
-                            "color": {
-                              "Literal": {
-                                "Value": "'#0d6abf'"
-                              }
-                            }
-                          },
-                          "nullColoringStrategy": {
-                            "strategy": {
-                              "Literal": {
-                                "Value": "'asZero'"
-                              }
-                            }
-                          }
-                        }
-                      }
+                    "ThemeDataColor": {
+                      "ColorId": 8,
+                      "Percent": -0.25
                     }
                   }
-                }
-              }
-            }
-          },
-          "selector": {
-            "data": [
-              {
-                "dataViewWildcard": {
-                  "matchingOption": 1
-                }
-              }
-            ]
-          }
-        },
-        {
-          "properties": {
-            "fillTransparency": {
-              "expr": {
-                "Literal": {
-                  "Value": "0D"
                 }
               }
             },
@@ -363,17 +245,46 @@
                 }
               }
             },
-            "borderColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#242424'"
+            "borderColorMatchFill": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "borderTransparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "dim_intl_plan"
+                          }
+                        },
+                        "Property": "international_plan"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'NO'"
+                      }
                     }
                   }
                 }
               }
-            }
+            ]
           }
         }
       ],
@@ -384,20 +295,6 @@
               "expr": {
                 "Literal": {
                   "Value": "1D"
-                }
-              }
-            },
-            "optimizeLabelDisplay": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "enableTitleDataLabel": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
                 }
               }
             },
@@ -419,8 +316,9 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "Literal": {
-                      "Value": "'#242424'"
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
                     }
                   }
                 }
@@ -435,46 +333,29 @@
             }
           }
         }
-      ],
-      "error": [
-        {
-          "properties": {
-            "enabled": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "measure.Churn Rate"
-          }
-        },
-        {
-          "properties": {},
-          "selector": {
-            "data": [
-              {
-                "dataViewWildcard": {
-                  "matchingOption": 0
-                }
-              }
-            ],
-            "metadata": "measure.Churn Rate",
-            "highlightMatching": 1
-          }
-        }
       ]
     },
     "visualContainerObjects": {
+      "stylePreset": [
+        {
+          "properties": {
+            "name": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Data labels'"
+                }
+              }
+            }
+          }
+        }
+      ],
       "title": [
         {
           "properties": {
-            "text": {
+            "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "'Churn Rate by Customer Service Calls'"
+                  "Value": "20D"
                 }
               }
             },
@@ -485,10 +366,10 @@
                 }
               }
             },
-            "fontSize": {
+            "text": {
               "expr": {
                 "Literal": {
-                  "Value": "20D"
+                  "Value": "'Churn Rate by International Plan'"
                 }
               }
             }
@@ -508,13 +389,13 @@
           }
         }
       ],
-      "stylePreset": [
+      "spacing": [
         {
           "properties": {
-            "name": {
+            "spaceAbovePlotArea": {
               "expr": {
                 "Literal": {
-                  "Value": "'Data labels'"
+                  "Value": "16D"
                 }
               }
             }
@@ -534,57 +415,20 @@
           }
         }
       ],
-      "background": [
+      "visualTooltip": [
         {
           "properties": {
-            "color": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      ],
-      "border": [
-        {
-          "properties": {
-            "show": {
+            "type": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "'Canvas'"
                 }
               }
-            }
-          }
-        }
-      ],
-      "dropShadow": [
-        {
-          "properties": {
-            "show": {
+            },
+            "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "visualHeader": [
-        {
-          "properties": {
-            "showVisualInformationButton": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
+                  "Value": "12D"
                 }
               }
             }
