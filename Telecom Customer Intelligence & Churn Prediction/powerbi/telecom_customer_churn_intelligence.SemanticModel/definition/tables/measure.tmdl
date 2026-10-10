@@ -32,6 +32,11 @@ table measure
 		formatString: 0
 		lineageTag: 65eeb1e1-88ce-49eb-aac7-d959e4e00b8f
 
+	measure churn_rate = COUNT(fact_churn[customer_key]) / 2666
+		lineageTag: 35d2d22c-c8bd-47ba-8f6b-9a9462764f93
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column Column1
 		dataType: string
 		lineageTag: 126e5bf2-c517-4398-9c4f-e96a93c7aef5
